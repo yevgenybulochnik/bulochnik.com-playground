@@ -1,4 +1,4 @@
-chadsvasc {
+chadsvasc, hasbled {
   float: left;
   margin: 5px;
   padding: 10px;
@@ -6,7 +6,7 @@ chadsvasc {
   box-shadow: 2px 2px 5px 2px grey;
 }
 
-chadsvasc button {
+chadsvasc button, hasbled button {
   display: block;
   width: 87px;
   height: 20px;
@@ -18,7 +18,7 @@ chadsvasc button {
   transition: width 0.5s;
 }
 
-chadsvasc button .right {
+chadsvasc button .right, hasbled button .right {
   float: left;
   width: 15px;
   border-right: solid grey 1px;
