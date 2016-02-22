@@ -43,7 +43,7 @@ app.directive('chadsvasc', function(){
     controller: 'riskcalc',
     controllerAs:'ctrl',
     template:`
-    <button ng-repeat='factor in ctrl.CHADS_vasc.riskfactors'>
+    <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.CHADS_vasc.riskfactors'>
       {{factor.name}}
       <div class='right'>+</div>
     </button>`
