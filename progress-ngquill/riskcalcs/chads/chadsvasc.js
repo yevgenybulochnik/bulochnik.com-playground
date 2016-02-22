@@ -12,14 +12,14 @@ app.controller('chadsvascctrl', function(){
   this.CHADS_vasc = {
   riskcalc_name:"CHADS-Vasc",
   riskfactors:[
-    {name:"CHF", value: 1, isclicked: false},
-    {name:"HTN", value: 1, isclicked: false},
-    {name:"AGE 65-75", value: 1, isclicked: false},
-    {name:"AGE >75", value: 2, isclicked: false},
-    {name:"DM", value: 1, isclicked: false},
-    {name:"CVA", value: 2, isclicked: false},
-    {name:"Female", value: 1, isclicked: false},
-    {name:"CAD", value: 1, isclicked: false}
+    {name:'Congestive Heart Failure', abv:"CHF", value: 1, isclicked: false},
+    {name: 'Hypertension', abv:"HTN", value: 1, isclicked: false},
+    {name:'Age between 65 and 75', abv:"AGE 65-75", value: 1, isclicked: false},
+    {name: 'Age over 75', abv:"AGE >75", value: 2, isclicked: false},
+    {name: 'Diabetes', abv:"DM", value: 1, isclicked: false},
+    {name: 'CVA/TIA', abv:"CVA", value: 2, isclicked: false},
+    {name: 'Female', abv:"Female", value: 1, isclicked: false},
+    {name: 'Coronary Artery Disease', abv:"CAD", value: 2, isclicked: false}
     ],
   scores:[
     '',
@@ -44,7 +44,7 @@ app.directive('chadsvasc', function(){
     controllerAs:'ctrl',
     template:`
     <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.CHADS_vasc.riskfactors'>
-      {{factor.name}}
+      {{factor.abv}}
       <div class='right'>+</div>
     </button>`
   };
