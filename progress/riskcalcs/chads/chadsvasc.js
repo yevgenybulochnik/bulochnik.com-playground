@@ -1,7 +1,7 @@
 var app = angular.module('chadsvasc',[]);
 
 
-app.controller('riskcalc', function(){
+app.controller('chadsvascctrl', function(){
   this.clicked = function(factor){
     if(factor.isclicked){
       factor.isclicked= false;
@@ -40,7 +40,7 @@ app.directive('chadsvasc', function(){
   return{
     restrict: "E",
     scope:{},
-    controller: 'riskcalc',
+    controller: 'chadsvascctrl',
     controllerAs:'ctrl',
     template:`
     <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.CHADS_vasc.riskfactors'>

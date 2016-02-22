@@ -1,1 +1,1 @@
-var app = angular.module('progressnote',['chadsvasc']);
+var app = angular.module('progressnote',['chadsvasc','hasbled']);

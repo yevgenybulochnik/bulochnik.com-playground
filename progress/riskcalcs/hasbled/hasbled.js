@@ -1,6 +1,13 @@
 var app = angular.module("hasbled", []);
 
 app.controller("hasbledctrl",function(){
+  this.clicked = function(factor){
+    if(factor.isclicked){
+      factor.isclicked= false;
+    }else{
+      factor.isclicked = true;
+    }
+  };
   this.hasbled =  {
   riskcalc_name:"HasBled",
   riskfactors:[
@@ -27,5 +34,15 @@ app.controller("hasbledctrl",function(){
 
 });
 app.directive("hasbled",function(){
-
+  return{
+    restrict: "E",
+    scope:{},
+    controller: 'hasbledctrl',
+    controllerAs:'ctrl',
+    template:`
+  <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.hasbled.riskfactors'>
+    {{factor.name}}
+    <div class='right'>+</div>
+  </button>`
+};
 });
