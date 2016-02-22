@@ -25,7 +25,7 @@ app.controller("hasbledctrl",function(){
   ]
 };
 
+});
 app.directive("hasbled",function(){
 
-});
 });
