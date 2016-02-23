@@ -36,3 +36,61 @@ button:hover {
 .active:hover {
   background-color: red;
 }
+
+subjective {
+  padding: 10px;
+  border: solid grey 1px;
+  display: inline-block;
+}
+
+subjective button {
+  padding: 2px;
+  padding-top: 3px;
+  margin: 0px;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+subjective .subj_button {
+  border: solid grey 1px;
+  height: 25px;
+  margin: 1px;
+  float: left;
+  clear: left;
+}
+
+subjective .subj_button .subj_positive {
+  float: left;
+  width: 25px;
+  border-right: solid grey 1px;
+}
+
+subjective .subj_button .subj_positive:hover {
+  background-color: pink;
+}
+
+subjective .subj_button .subj_middle {
+  float: left;
+  width: 150px;
+  padding-top: 3px;
+  text-align: center;
+}
+
+subjective .subj_button .subj_negative {
+  float: left;
+  width: 25px;
+  border-left: solid grey 1px;
+}
+
+subjective .subj_button .subj_negative:hover {
+  background-color: lightgreen;
+}
+
+subjective .subj_button .red {
+  background-color: red;
+}
+
+subjective .subj_button .red:hover {
+  background-color: red;
+}
