@@ -1,6 +1,13 @@
 var app = angular.module('subj', []);
 
 app.controller('subjctrl', function(){
+  this.d_clicked = function(question){
+    if(question.d_isclicked){
+      question.d_isclicked = false;
+    }else{
+      question.d_isclicked = true;
+    }
+  };
   this.usr_clicked = function(question){
     if(question.usr_isclicked){
       question.usr_isclicked = false;
@@ -29,7 +36,7 @@ app.directive("subjective", function(){
       <div class='subj_button' ng-repeat='question in ctrl.questions'>
         <button ng-click='ctrl.usr_clicked(question)' ng-class='{red:question.usr_isclicked}' class='subj_positive'>+</button>
         <div class='subj_middle'>{{question.text}}</div>
-        <button class='subj_negative'>-</button>
+        <button ng-click='ctrl.d_clicked(question)' ng-class='{green:question.d_isclicked}' class='subj_negative'>-</button>
       </div>`
   };
 });

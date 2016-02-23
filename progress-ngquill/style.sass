@@ -16,21 +16,26 @@ chadsvasc button, hasbled button
   border: solid grey 1px
   box-shadow: $insetshadow
   background-color: white
-  transition: width 0.5s
+  transition: width 0.5s, background-color 0.2s
   .right
     float: left
     width: 15px
     border-right: solid grey 1px
 button:hover
   background-color: pink
+button:active
+  background-color: darkred
 
 .active
   background-color: red
   width: 100px
 .active:hover
   background-color: red
+.active:active
+  background-color: darkred
 
 subjective
+  margin: 5px
   padding: 10px
   border: solid grey 1px
   display: inline-block
@@ -53,8 +58,11 @@ subjective
     .subj_positive
       float: left
       width: 25px
+      transition: background-color 0.2s
     .subj_positive:hover
       background-color: pink
+    .subj_positive:active
+      background-color: darkred
     .subj_middle
       float: left
       width: 150px
@@ -63,9 +71,20 @@ subjective
     .subj_negative
       float: left
       width: 25px
+      transition: background-color 0.2s
     .subj_negative:hover
-      background-color: lightgreen
+      background-color: rgba(180, 238, 184, 0.65)
+    .subj_negative:active
+      background-color: green
     .red
       background-color: red
     .red:hover
       background-color: red
+    .red:active
+      background-color: darkred
+    .green
+      background-color: lightgreen
+    .green:hover
+      background-color: lightgreen
+    .green:active
+      background-color: green
