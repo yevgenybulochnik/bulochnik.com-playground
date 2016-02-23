@@ -41,6 +41,7 @@ subjective {
   padding: 10px;
   border: solid grey 1px;
   display: inline-block;
+  box-shadow: 2px 2px 5px 2px grey;
 }
 
 subjective button {
@@ -50,6 +51,7 @@ subjective button {
   height: 100%;
   border: none;
   background: white;
+  box-shadow: inset 0px 0px 2px 1px grey;
 }
 
 subjective .subj_button {
@@ -58,6 +60,7 @@ subjective .subj_button {
   margin: 1px;
   float: left;
   clear: left;
+  box-shadow: inset 0px 0px 2px 1px grey;
 }
 
 subjective .subj_button .subj_positive {
