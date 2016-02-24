@@ -70,6 +70,18 @@ subjective .subj_button {
   float: left;
   clear: left;
   box-shadow: inset 0px 0px 2px 1px grey;
+  position: relative;
+}
+
+subjective .subj_button .subj_input {
+  border: solid grey 1px;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+  bottom: 17px;
+  overflow: auto;
 }
 
 subjective .subj_button .subj_positive {
@@ -89,8 +101,10 @@ subjective .subj_button .subj_positive:active {
 subjective .subj_button .subj_middle {
   float: left;
   width: 150px;
+  height: 22px;
   padding-top: 3px;
   text-align: center;
+  transition: background-color 1s;
 }
 
 subjective .subj_button .subj_negative {

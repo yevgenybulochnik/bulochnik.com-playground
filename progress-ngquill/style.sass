@@ -55,6 +55,16 @@ subjective
     float: left
     clear: left
     box-shadow: $insetshadow
+    position: relative
+    .subj_input
+      border: solid grey 1px
+      background-color: white
+      width: 300px
+      height: 50px
+      position: absolute
+      left: 20px
+      bottom: 17px
+      overflow: auto
     .subj_positive
       float: left
       width: 25px
@@ -66,8 +76,10 @@ subjective
     .subj_middle
       float: left
       width: 150px
+      height: 22px
       padding-top: 3px
       text-align: center
+      transition: background-color 1s
     .subj_negative
       float: left
       width: 25px
