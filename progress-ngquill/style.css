@@ -33,7 +33,7 @@ button:active {
 }
 
 .active {
-  background-color: red;
+  background-color: red !important;
   width: 100px;
 }
 
@@ -80,7 +80,7 @@ subjective .subj_button .subj_input {
   height: 50px;
   position: absolute;
   left: 20px;
-  bottom: 17px;
+  top: -50px;
   overflow: auto;
 }
 
