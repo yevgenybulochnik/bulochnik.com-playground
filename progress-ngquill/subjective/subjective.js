@@ -29,6 +29,7 @@ app.controller('subjctrl', function(){
 
 app.directive("subjective", function(){
   return{
+    scope:{},
     restrict: "E",
     controller: 'subjctrl',
     controllerAs: 'ctrl',
