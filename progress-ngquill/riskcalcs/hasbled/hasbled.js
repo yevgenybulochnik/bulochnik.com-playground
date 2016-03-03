@@ -1,6 +1,6 @@
-var app = angular.module("hasbled", []);
+var app = angular.module("hasbled", ['noteservice']);
 
-app.controller("hasbledctrl",function(){
+app.controller("hasbledctrl",function(noteservice){
   this.score = 0;
   this.percent = "";
   this.clicked_factors = [];
@@ -16,7 +16,8 @@ app.controller("hasbledctrl",function(){
       this.clicked_factors.push(factor.abv);
     }
   this.percent = this.hasbled.scores[this.score];
-  this.getassessment(this.hasbled.riskcalc_name,this.score, this.percent, this.clicked_factors);
+  var assessment = this.getassessment(this.hasbled.riskcalc_name,this.score, this.percent, this.clicked_factors);
+  noteservice.pushAssessment('hasbled',assessment);
   };
   this.getassessment = function(riskcalc_name, score,percent, clicked_factors){
     var text = 'Patient has a '+riskcalc_name+'='+score+' (';
@@ -30,6 +31,7 @@ app.controller("hasbledctrl",function(){
       }
       text+=clicked_factors[clicked_factors.length-1]+') corresponding to a '+percent+" annual bleed risk";
     }
+    return text;
   };
   this.hasbled =  {
   riskcalc_name:"HasBled",
