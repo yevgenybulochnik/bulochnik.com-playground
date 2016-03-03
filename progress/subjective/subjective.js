@@ -1,12 +1,13 @@
-var app = angular.module('subj', []);
+var app = angular.module('subj', ['noteservice']);
 
-app.controller('subjctrl', function(){
+app.controller('subjctrl', function(noteservice){
   this.d_clicked = function(question){
     if(question.d_isclicked){
       question.d_isclicked = false;
     }else{
       question.d_isclicked = true;
     }
+    noteservice.pushdenial(question.denial);
   };
   this.usr_clicked = function(question){
     if(question.usr_isclicked){
