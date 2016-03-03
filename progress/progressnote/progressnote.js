@@ -68,6 +68,11 @@ app.directive("progressnote", function(noteservice){
         scope.ctrl.addremove("before", "Plan:", noteservice.note.chadsvasc);
         scope.ctrl.chadsvasc = noteservice.note.chadsvasc;
       });
+      $('hasbled').on('click','button', function(){
+        scope.ctrl.addremove("before", "Plan:",scope.ctrl.hasbled);
+        scope.ctrl.addremove("before", "Plan:", noteservice.note.hasbled);
+        scope.ctrl.hasbled= noteservice.note.hasbled;
+      });
       $('subjective').on('click','.subj_negative', function(){
         for(i=0;i<scope.ctrl.subj_denial.length;i++){
           scope.ctrl.addremove("before", "Objective:", scope.ctrl.subj_denial[i]);
