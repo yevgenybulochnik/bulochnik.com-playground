@@ -1,7 +1,7 @@
-var app = angular.module('chadsvasc',[]);
+var app = angular.module('chadsvasc',['noteservice']);
 
 
-app.controller('chadsvascctrl', function(){
+app.controller('chadsvascctrl', function(noteservice){
   this.score = 0;
   this.percent = "";
   this.clicked_factors = [];
@@ -17,7 +17,8 @@ app.controller('chadsvascctrl', function(){
       this.clicked_factors.push(factor.abv);
     }
     this.percent = this.CHADS_vasc.scores[this.score];
-    this.getassessment(this.CHADS_vasc.riskcalc_name,this.score, this.percent, this.clicked_factors);
+    var assessment = this.getassessment(this.CHADS_vasc.riskcalc_name,this.score, this.percent, this.clicked_factors);
+    noteservice.pushAssessment('chadsvasc',assessment);
     };
     this.getassessment = function(riskcalc_name, score,percent, clicked_factors){
       var text = 'Patient has a '+riskcalc_name+'='+score+' (';
@@ -31,6 +32,7 @@ app.controller('chadsvascctrl', function(){
         }
         text+=clicked_factors[clicked_factors.length-1]+') corresponding to a '+percent+" annual stroke risk";
       }
+      return text;
     };
   this.CHADS_vasc = {
   riskcalc_name:"CHADS-Vasc",
