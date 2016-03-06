@@ -17,7 +17,7 @@ app.controller('subjctrl', function(noteservice){
     }
   };
   this.questions = [
-    {text: "Missed doses", denial: "Patient denies any missed doses, confirms correct dosage.", d_isclicked: false, usr_input: "", usr_isclicked: false},
+    {text: "Missed doses", denial: "Denies any missed doses, confirms correct dosage.", d_isclicked: false, usr_input: "", usr_isclicked: false},
     {text: "Bleeding/Bruising", denial: "Denies any unusual bleeding or bruising.", d_isclicked: false, usr_input: "", usr_isclicked: false},
     {text: "Medication Changes", denial: "Denies any medication changes.", d_isclicked: false, usr_input:"", usr_isclicked: false},
     {text: "Dietary Changes", denial: "Denies any dietary changes.", d_isclicked: false, usr_input: "", usr_isclicked: false},

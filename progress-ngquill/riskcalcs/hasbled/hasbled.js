@@ -67,10 +67,6 @@ app.directive("hasbled",function(){
     scope:{},
     controller: 'hasbledctrl',
     controllerAs:'ctrl',
-    template:`
-  <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.hasbled.riskfactors'>
-    {{factor.abv}}
-    <div class='right'>+</div>
-  </button>`
-};
+    templateUrl:"riskcalcs/hasbled/hasbled.html"
+  };
 });

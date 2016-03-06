@@ -67,10 +67,6 @@ app.directive('chadsvasc', function(){
     scope:{},
     controller: 'chadsvascctrl',
     controllerAs:'ctrl',
-    template:`
-    <button ng-click='ctrl.clicked(factor)' ng-class='{active:factor.isclicked}' ng-repeat='factor in ctrl.CHADS_vasc.riskfactors'>
-      {{factor.abv}}
-      <div class='right'>+</div>
-    </button>`
-  };
+    templateUrl:'riskcalcs/chads/chadsvasc.html'
+};
 });
