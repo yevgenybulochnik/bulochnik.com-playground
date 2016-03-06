@@ -327,7 +327,7 @@
             return $templateCache.put('ngQuill/template.html',
                 '<div id="content-container">' +
                     '<div class="advanced-wrapper">' +
-                        '<div class="toolbar toolbar-container" ng-if="toolbar" ng-show="toolbarCreated && showToolbar">' +
+                        '<div id="toolbar" class="toolbar toolbar-container" ng-if="toolbar" ng-show="toolbarCreated && showToolbar">' +
                             '<span class="ql-format-group" ng-if="shouldShow([\'font\', \'size\'])">' +
                                 '<select title="{{dict.font}}" class="ql-font" ng-if="shouldShow([\'font\'])">' +
                                     '<option ng-repeat="option in fontfamilyOptions" value="{{option.alias}}">{{option.label}}</option>' +
@@ -435,7 +435,7 @@
                                 '<span title="{{dict.image}}" class="ql-format-button ql-image" ng-if="shouldShow([\'image\'])"></span>' +
                             '</span>' +
                         '</div>' +
-                        '<div class="editor-container"></div>' +
+                        '<div id="editor" class="editor-container"></div>' +
                         '<input type="text" ng-model="modelLength" ng-if="required" ng-hide="true" ng-pattern="/^([2-9]|[1-9][0-9]+)$/">' +
                     '</div>' +
                 '</div>');
