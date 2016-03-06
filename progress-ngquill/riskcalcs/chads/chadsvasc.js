@@ -1,7 +1,7 @@
-var app = angular.module('chadsvasc',['noteservice']);
+var app = angular.module('chadsvasc',[]);
 
 
-app.controller('chadsvascctrl', function(noteservice){
+app.controller('chadsvascctrl', function(){
   this.score = 0;
   this.percent = "";
   this.clicked_factors = [];
@@ -18,7 +18,6 @@ app.controller('chadsvascctrl', function(noteservice){
     }
     this.percent = this.CHADS_vasc.scores[this.score];
     var assessment = this.getassessment(this.CHADS_vasc.riskcalc_name,this.score, this.percent, this.clicked_factors);
-    noteservice.pushAssessment('chadsvasc',assessment);
     };
     this.getassessment = function(riskcalc_name, score,percent, clicked_factors){
       var text = 'Patient has a '+riskcalc_name+'='+score+' (';
@@ -68,5 +67,5 @@ app.directive('chadsvasc', function(){
     controller: 'chadsvascctrl',
     controllerAs:'ctrl',
     templateUrl:'riskcalcs/chads/chadsvasc.html'
-};
+  };
 });

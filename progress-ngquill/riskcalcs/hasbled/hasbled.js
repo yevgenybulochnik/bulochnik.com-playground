@@ -1,6 +1,6 @@
-var app = angular.module("hasbled", ['noteservice']);
+var app = angular.module("hasbled", []);
 
-app.controller("hasbledctrl",function(noteservice){
+app.controller("hasbledctrl",function(){
   this.score = 0;
   this.percent = "";
   this.clicked_factors = [];
@@ -17,7 +17,6 @@ app.controller("hasbledctrl",function(noteservice){
     }
   this.percent = this.hasbled.scores[this.score];
   var assessment = this.getassessment(this.hasbled.riskcalc_name,this.score, this.percent, this.clicked_factors);
-  noteservice.pushAssessment('hasbled',assessment);
   };
   this.getassessment = function(riskcalc_name, score,percent, clicked_factors){
     var text = 'Patient has a '+riskcalc_name+'='+score+' (';
