@@ -157,6 +157,7 @@ subjective .subj_button .green:active {
 
 progressnote {
   float: left;
+  border: solid black 1px;
 }
 
 progressnote .editor_container {

@@ -1,6 +1,6 @@
 var app = angular.module('subj', []);
 
-app.controller('subjctrl', function(noteservice){
+app.controller('subjctrl', function(){
   this.d_clicked = function(question){
     if(question.d_isclicked){
       question.d_isclicked = false;
