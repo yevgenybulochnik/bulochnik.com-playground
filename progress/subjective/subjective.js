@@ -34,13 +34,7 @@ app.directive("subjective", function(){
     restrict: "E",
     controller: 'subjctrl',
     controllerAs: 'ctrl',
-    template: `
-      <div class='subj_button' ng-repeat='question in ctrl.questions'>
-        <button ng-click='ctrl.usr_clicked(question)' ng-class='{active:question.usr_isclicked, red:question.usr_input}' class='subj_positive'>+</button>
-        <div class='subj_middle' ng-class='{red:question.usr_input}'>{{question.text}}</div>
-        <button ng-hide='question.usr_input' ng-click='ctrl.d_clicked(question)' ng-class='{green:question.d_isclicked}' class='subj_negative'>-</button>
-        <textarea ng-blur="ctrl.usr_clicked(question)" ng-model='question.usr_input' ng-show='question.usr_isclicked' class='subj_input' contenteditable='true'>{{question.usr_input}}</textarea>
-      </div>`,
+    templateUrl:"subjective/subjective.html",
     link: function($scope, element){
       $(element).on('click','.subj_positive', function(){
         $(element).find('.subj_input').focus();
