@@ -1,15 +1,14 @@
-app = angular.module('progressnote',['ngQuill']);
+app = angular.module('progressnote',['ngQuill','noteservice']);
 
-app.controller('progressctrl',function(){
-  this.test = "hello world";
+app.controller('progressctrl',function($scope,noteservice){
+  $scope.test =noteservice.hasbled_assessment;
 });
 
-app.directive("progressnote",function(){
+app.directive("progressnote",function(noteservice){
   return{
     scope:{},
     restrict: "E",
     controller: "progressctrl",
-    controllerAs: "ctrl",
-    templateUrl: "progressnote/progressnote.html"
+    templateUrl: "progressnote/progressnote.html",
   };
 });
