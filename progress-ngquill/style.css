@@ -167,6 +167,7 @@ progressnote #toolbar {
 
 progressnote #editor {
   border: solid grey 1px;
+  height: 500px;
   font-size: 12pt;
   font-family: arial;
   margin-top: 15px;
