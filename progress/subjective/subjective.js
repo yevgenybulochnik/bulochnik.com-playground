@@ -16,6 +16,16 @@ app.controller('subjctrl', function(noteservice){
       question.usr_isclicked = true;
     }
   };
+  this.inputblur = function(){
+    var usr_input = [];
+    for(i=0;i<this.questions.length;i++){
+      if(this.questions[i].usr_input){
+        usr_input.push(this.questions[i].usr_input);
+      }
+    }
+    noteservice.pushusrinput(usr_input);
+    console.log(usr_input);
+  };
   this.questions = [
     {text: "Missed doses", denial: "Denies any missed doses, confirms correct dosage.", d_isclicked: false, usr_input: "", usr_isclicked: false},
     {text: "Bleeding/Bruising", denial: "Denies any unusual bleeding or bruising.", d_isclicked: false, usr_input: "", usr_isclicked: false},

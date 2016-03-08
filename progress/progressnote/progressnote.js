@@ -1,15 +1,33 @@
 var app = angular.module('progressnote', ['noteservice']);
 
-app.controller('progressctrl', function(){
+app.controller('progressctrl', function($scope,noteservice){
+  var self = this;
+  this.chadsvasc = '';
+  this.hasbled = '';
+  this.subj_usrinput = noteservice.note.subj_usrinput;
+  $scope.$watch(function(){return self.subj_usrinput},function(newvalue, oldvalue){
+    for(i=0;i<oldvalue.length;i++){
+      self.addremove("after","Subjective:", oldvalue[i]);
+    }
+    for(i=0;i<newvalue.length;i++){
+      self.addremove("after","Subjective:", newvalue[i]);
+    }
+  },true);
+  this.subj_denial = noteservice.note.subj_denial;
+  $scope.$watch(function(){return self.subj_denial},function(newvalue, oldvalue){
+     for(i=0;i<oldvalue.length;i++){
+       self.addremove("before","Objective:", oldvalue[i]);
+     }
+     for(i=0;i<newvalue.length;i++){
+       self.addremove("before","Objective:", newvalue[i]);
+     }
+   },true);
   this.editor = new Quill('#editor', {
   modules: {
     'toolbar': { container: '#toolbar' },
   },
   theme: 'snow'
   });
-  this.chadsvasc = '';
-  this.hasbled = '';
-  this.subj_denial = [];
   this.addremove = function(before_after,insertion_text,text){
     if(text === '' || text === undefined){
       return;
@@ -64,24 +82,15 @@ app.directive("progressnote", function(noteservice){
       </div>`,
     link: function(scope){
       $('chadsvasc').on('click','button', function(){
-        scope.ctrl.addremove("before", "Plan:",scope.ctrl.chadsvasc);
-        scope.ctrl.addremove("before", "Plan:", noteservice.note.chadsvasc);
-        scope.ctrl.chadsvasc = noteservice.note.chadsvasc;
-      });
-      $('hasbled').on('click','button', function(){
-        scope.ctrl.addremove("before", "Plan:",scope.ctrl.hasbled);
-        scope.ctrl.addremove("before", "Plan:", noteservice.note.hasbled);
-        scope.ctrl.hasbled= noteservice.note.hasbled;
-      });
-      $('subjective').on('click','.subj_negative', function(){
-        for(i=0;i<scope.ctrl.subj_denial.length;i++){
-          scope.ctrl.addremove("before", "Objective:", scope.ctrl.subj_denial[i]);
-        }
-        for(i=0;i<noteservice.note.subj_denial.length;i++){
-          scope.ctrl.addremove("before", "Objective:", noteservice.note.subj_denial[i]);
-        }
-        scope.ctrl.subj_denial = noteservice.note.subj_denial.slice(0);
-      });
+          scope.ctrl.addremove("before", "Plan:",scope.ctrl.chadsvasc);
+          scope.ctrl.addremove("before", "Plan:", noteservice.note.chadsvasc);
+          scope.ctrl.chadsvasc = noteservice.note.chadsvasc;
+        });
+        $('hasbled').on('click','button', function(){
+          scope.ctrl.addremove("before", "Plan:",scope.ctrl.hasbled);
+          scope.ctrl.addremove("before", "Plan:", noteservice.note.hasbled);
+          scope.ctrl.hasbled= noteservice.note.hasbled;
+        });
     }
-  };
+ };
 });

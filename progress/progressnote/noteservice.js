@@ -5,7 +5,7 @@ app.service('noteservice',function(){
     chadsvasc: '',
     hasbled: '',
     subj_denial: [],
-    subj_usertext: [],
+    subj_usrinput: [],
   };
   this.pushAssessment = function(riskcalc, assessment){
     this.note[riskcalc] = assessment;
@@ -17,5 +17,12 @@ app.service('noteservice',function(){
       var index = this.note.subj_denial.indexOf(text);
       this.note.subj_denial.splice(index,1);
     }
+  };
+  this.pushusrinput = function(usrinput){
+    this.note.subj_usrinput.length = 0;
+    for(i=0;i<usrinput.length;i++){
+      this.note.subj_usrinput.push(usrinput[i]);
+    }
+    console.log(this.note);
   };
 });
