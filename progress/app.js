@@ -1,1 +1,1 @@
-var app = angular.module('progresseditor',['progressnote','chadsvasc','hasbled','subj','noteservice']);
+var app = angular.module('progresseditor',['progressnote','chadsvasc','hasbled','subj']);
