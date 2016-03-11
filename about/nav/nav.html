@@ -1,23 +1,9 @@
-<nav>
-  <ul class="top_layer">
-    <li>About</li>
-    <li>Coding Projects
-      <ul class="sub_layer">
-        <li>Progress Note Editor</li>
-        <li>Electronic CV</li>
-      </ul>
-    </li>
-    <li>Climbing </li>
-    <li>Contact card
-      <ul class="sub_layer">
-        <li>GitHub</li>
-        <li>Email</li>
+<nav ng-mouseenter="nav.nav_mouseover()">
+  <ul class="link_container">
+    <li class="link" ng-repeat="content in nav.links">{{content.link}}
+      <ul style="font-size:large" class="link_container" ng-if="content.sublink.links.length">
+        <li ng-show="item.visible" class="sublink" ng-repeat="item in content.sublink.links">{{item.link}}</li>
       </ul>
     </li>
   </ul>
 </nav>
-<div id="content">
-  <div>
-    <div class="about">My name is Eugene Bulochnik </div>
-  </div>
-</div>
