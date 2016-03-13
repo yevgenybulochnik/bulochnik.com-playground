@@ -1,8 +1,8 @@
-<nav ng-mouseenter="nav.nav_mouseover()">
+<nav ng-mouseenter="nav.nav_mouseenter()" ng-mouseleave="nav.nav_mouseleave()">
   <ul class="link_container">
     <li class="link" ng-repeat="content in nav.links">{{content.link}}
-      <ul style="font-size:large" class="link_container" ng-if="content.sublink.links.length">
-        <li ng-show="item.visible" class="sublink" ng-repeat="item in content.sublink.links">{{item.link}}</li>
+      <ul style="font-size:large" class="link_container" ng-if="content.sublink.length">
+        <li ng-show="item.visible" class="sublink" ng-repeat="item in content.sublink">{{item.link}}</li>
       </ul>
     </li>
   </ul>
