@@ -36,6 +36,17 @@ nav .link_container .link:hover {
   transition: background-color 1s;
 }
 
+nav .link_container .sublink {
+  height: 0px;
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+
 nav .link_container .sublink:hover {
   color: orange;
+}
+
+nav:hover .sublink {
+  height: 20px;
+  opacity: 1;
 }
