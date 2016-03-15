@@ -3,7 +3,7 @@ var app = angular.module("NavMenu",[]);
 
 app.controller("navctrl",function(){
   this.links =  [
-      {link: "About", isclicked: false , sublink:[]},
+      {link: "About", path: "#/about", isclicked: false , sublink:[]},
       {link: "Coding Projects", isclicked: false,
        sublink:[
          {link:"Progress Note Editor", isclicked: false},
@@ -18,6 +18,13 @@ app.controller("navctrl",function(){
        ]
       }
      ];
+  this.clicked = function(contentlink){
+    if(contentlink.isclicked){
+      contentlink.isclicked = false;
+    }else{
+      contentlink.isclicked = true;
+    }
+  };
 });
 
 app.directive('euNav',function(){

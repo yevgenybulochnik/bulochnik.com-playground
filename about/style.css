@@ -25,28 +25,38 @@ nav {
 }
 
 nav .link_container {
-  list-style: none;
   padding-left: 20px;
+}
+
+nav .link_container:hover {
+  background-color: black;
+  color: white;
+}
+
+nav .link_container:hover .link {
+  color: white;
+}
+
+nav .link {
+  text-decoration: none;
+  color: black;
   font-size: x-large;
 }
 
-nav .link_container .link:hover {
-  background-color: black;
-  color: white;
-  transition: background-color 1s;
+nav .sublink {
+  font-size: large;
 }
 
-nav .link_container .sublink {
-  height: 0px;
-  opacity: 0;
-  transition: all 0.4s linear;
-}
-
-nav .link_container .sublink:hover {
+nav .sublink:hover {
   color: orange;
 }
 
-nav:hover .sublink {
-  height: 20px;
-  opacity: 1;
+.active {
+  background: black !important;
+  color: white !important;
+}
+
+.active .sublink {
+  height: 20px !important;
+  opacity: 1 !important;
 }

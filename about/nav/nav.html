@@ -1,9 +1,8 @@
 <nav>
-  <ul class="link_container">
-    <li class="link" ng-repeat="content in nav.links">{{content.link}}
-      <ul style="font-size:large" class="link_container" ng-if="content.sublink.length">
-        <li  class="sublink" ng-repeat="item in content.sublink">{{item.link}}</li>
-      </ul>
-    </li>
-  </ul>
+  <div class="link_container" ng-repeat="content in nav.links">
+    <a class="link" ng-href="{{content.path}}">{{content.link}}</a>
+    <div class="link_container" ng-if="content.sublink.length" ng-repeat="item in content.sublink">
+      <a class="sublink">{{item.link}}</a>
+    </div>
+  </div>
 </nav>

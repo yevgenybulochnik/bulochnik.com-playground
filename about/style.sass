@@ -20,20 +20,26 @@ nav
   cursor: pointer
   padding-top: 10%
   .link_container
-    list-style: none
     //border: solid black 1px
     padding-left: 20px
-    font-size: x-large
-    .link:hover
+    &:hover
       background-color: black
       color: white
-      transition: background-color 1s
-    .sublink
-      height: 0px
-      opacity: 0
-      transition: all 0.4s linear
-    .sublink:hover
+      .link
+        color: white
+  .link
+    text-decoration: none
+    color: black
+    font-size: x-large
+  .sublink
+    font-size: large
+    &:hover
       color: orange
-nav:hover .sublink
-  height: 20px
-  opacity: 1
+
+
+.active
+  background: black !important
+  color: white !important
+  .sublink
+    height: 20px !important
+    opacity: 1 !important
