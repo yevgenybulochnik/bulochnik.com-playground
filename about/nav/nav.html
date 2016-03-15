@@ -1,7 +1,7 @@
 <nav>
   <div class="link_container" ng-repeat="content in nav.links">
     <a class="link" ng-href="{{content.path}}">{{content.link}}</a>
-    <div class="link_container" ng-if="content.sublink.length" ng-repeat="item in content.sublink">
+    <div class="sublink_container" ng-if="content.sublink.length" ng-repeat="item in content.sublink">
       <a class="sublink">{{item.link}}</a>
     </div>
   </div>

@@ -21,7 +21,12 @@ nav {
   height: 100%;
   position: fixed;
   cursor: pointer;
-  padding-top: 10%;
+  padding-top: 20%;
+}
+
+nav:hover .sublink_container {
+  height: 20px;
+  opacity: 1;
 }
 
 nav .link_container {
@@ -38,16 +43,25 @@ nav .link_container:hover .link {
 }
 
 nav .link {
+  display: block;
   text-decoration: none;
   color: black;
   font-size: x-large;
 }
 
-nav .sublink {
+nav .sublink_container {
+  padding-left: 20px;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+nav .sublink_container .sublink {
+  display: block;
   font-size: large;
 }
 
-nav .sublink:hover {
+nav .sublink_container .sublink:hover {
   color: orange;
 }
 

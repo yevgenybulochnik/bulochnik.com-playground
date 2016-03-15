@@ -18,7 +18,10 @@ nav
   height: 100%
   position: fixed
   cursor: pointer
-  padding-top: 10%
+  padding-top: 20%
+  &:hover .sublink_container
+    height: 20px
+    opacity: 1
   .link_container
     //border: solid black 1px
     padding-left: 20px
@@ -28,13 +31,20 @@ nav
       .link
         color: white
   .link
+    display: block
     text-decoration: none
     color: black
     font-size: x-large
-  .sublink
-    font-size: large
-    &:hover
-      color: orange
+  .sublink_container
+    padding-left: 20px
+    height: 0px
+    opacity: 0
+    transition: all 0.3s
+    .sublink
+      display: block
+      font-size: large
+      &:hover
+        color: orange
 
 
 .active
