@@ -21,7 +21,7 @@ nav {
   height: 100%;
   position: fixed;
   cursor: pointer;
-  padding-top: 20%;
+  padding-top: 200px;
 }
 
 nav:hover .sublink_container {
@@ -70,7 +70,15 @@ nav .sublink_container .sublink:hover {
   color: white !important;
 }
 
-.active .sublink {
+.active .link {
+  color: white !important;
+}
+
+.active .sublink_container {
   height: 20px !important;
   opacity: 1 !important;
+}
+
+.active_sublink {
+  color: orange !important;
 }

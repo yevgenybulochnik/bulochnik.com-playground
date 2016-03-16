@@ -18,13 +18,30 @@ app.controller("navctrl",function(){
        ]
       }
      ];
-  this.clicked = function(contentlink){
+  this.linkclicked = function(contentlink){
+    for(i=0;i<this.links.length;i++){
+      this.links[i].isclicked = false;
+    }
     if(contentlink.isclicked){
       contentlink.isclicked = false;
     }else{
       contentlink.isclicked = true;
     }
   };
+  this.sublinkclicked = function(itemlink){
+    for(i=0;i<this.links.length;i++){
+      if(this.links[i].sublink.length){
+        for(n=0;n<this.links[i].sublink.length;n++){
+          this.links[i].sublink[n].isclicked = false;
+        }
+      }
+    }
+    if(itemlink.isclicked){
+      itemlink.isclicked = false;
+    }else{
+      itemlink.isclicked = true;
+    }
+  }
 });
 
 app.directive('euNav',function(){

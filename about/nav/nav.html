@@ -1,8 +1,8 @@
 <nav>
-  <div class="link_container" ng-repeat="content in nav.links">
+  <div class="link_container" ng-click="nav.linkclicked(content)" ng-class="{active:content.isclicked}" ng-repeat="content in nav.links">
     <a class="link" ng-href="{{content.path}}">{{content.link}}</a>
     <div class="sublink_container" ng-if="content.sublink.length" ng-repeat="item in content.sublink">
-      <a class="sublink">{{item.link}}</a>
+      <a ng-click="nav.sublinkclicked(item)" ng-class="{active_sublink:item.isclicked}" class="sublink">{{item.link}}</a>
     </div>
   </div>
 </nav>
