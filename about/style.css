@@ -10,7 +10,7 @@ body {
 }
 
 #content .about {
-  margin: auto 200px;
+  margin: auto;
 }
 
 nav {
@@ -81,4 +81,71 @@ nav .sublink_container .sublink:hover {
 
 .active_sublink {
   color: orange !important;
+}
+
+.name {
+  padding: 20px;
+  font-size: 200%;
+  font-family: impact;
+  color: grey;
+  border-right: dashed black 1px;
+  border-bottom: dashed black 1px;
+  float: left;
+}
+
+.name .alias {
+  animation: nameshift80 0.7s linear forwards;
+}
+
+.name .last {
+  animation: nameshift160 0.7s linear forwards;
+}
+
+.cred {
+  border-bottom: solid black 1px;
+  font-family: impact;
+  margin-top: 150px;
+  float: left;
+  font-size: 200%;
+  opacity: 0;
+  animation: credfade 1.2s linear 1s forwards;
+}
+
+.cred .att {
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 100px;
+}
+
+.about {
+  float: left;
+  clear: left;
+}
+
+@keyframes nameshift80 {
+  from {
+    padding-left: 0px;
+  }
+  to {
+    padding-left: 90px;
+  }
+}
+
+@keyframes nameshift160 {
+  from {
+    padding-left: 0px;
+  }
+  to {
+    padding-left: 180px;
+  }
+}
+
+@keyframes credfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 100px;
+  }
 }
