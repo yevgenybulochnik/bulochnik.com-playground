@@ -22,6 +22,7 @@ body
     padding: 20px
     float: left
     box-shadow: 5px 0px 20px 0px black
+    animation: aboutin 2s forwards
 
 nav
   //border: solid black 1px
@@ -78,12 +79,17 @@ nav
   font-size: 300%
   font-family: impact
   color: grey
+  opacity: 0
   float: left
+  animation: namefade 1.2s linear forwards
+  animation-delay: 2s
   .first
   .alias
     animation: nameshift80 0.7s linear forwards
+    animation-delay: 2s
   .last
     animation: nameshift160 0.7s linear forwards
+    animation-delay: 2s
 .cred
   border-bottom: solid black 1px
   font-family: impact
@@ -91,7 +97,7 @@ nav
   margin-top: 50px
   font-size: 175%
   opacity: 0
-  animation: credfade 1.2s linear 1s forwards
+  animation: credfade 1.2s linear 2s forwards
   .att
     //border: solid black 1px
     margin-top: 20px
@@ -100,7 +106,16 @@ nav
 .info
   float: left
   clear: left
+  opacity: 0
+  animation: namefade 1.2s linear 2s forwards
 
+@keyframes aboutin
+  from
+    width: 0px
+    height: 0px
+  to
+    width: 1250px
+    height: 500px
 @keyframes nameshift80
   from
     padding-left: 0px
@@ -112,6 +127,12 @@ nav
     padding-left: 0px
   to
     padding-left: 180px
+
+@keyframes namefade
+  from
+    opacity: 0
+  to
+    opacity: 1
 
 @keyframes credfade
   from

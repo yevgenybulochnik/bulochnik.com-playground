@@ -24,6 +24,7 @@ body {
   padding: 20px;
   float: left;
   box-shadow: 5px 0px 20px 0px black;
+  animation: aboutin 2s forwards;
 }
 
 nav {
@@ -101,15 +102,20 @@ nav .sublink_container .sublink:hover {
   font-size: 300%;
   font-family: impact;
   color: grey;
+  opacity: 0;
   float: left;
+  animation: namefade 1.2s linear forwards;
+  animation-delay: 2s;
 }
 
 .name .alias {
   animation: nameshift80 0.7s linear forwards;
+  animation-delay: 2s;
 }
 
 .name .last {
   animation: nameshift160 0.7s linear forwards;
+  animation-delay: 2s;
 }
 
 .cred {
@@ -119,7 +125,7 @@ nav .sublink_container .sublink:hover {
   margin-top: 50px;
   font-size: 175%;
   opacity: 0;
-  animation: credfade 1.2s linear 1s forwards;
+  animation: credfade 1.2s linear 2s forwards;
 }
 
 .cred .att {
@@ -131,6 +137,19 @@ nav .sublink_container .sublink:hover {
 .info {
   float: left;
   clear: left;
+  opacity: 0;
+  animation: namefade 1.2s linear 2s forwards;
+}
+
+@keyframes aboutin {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 1250px;
+    height: 500px;
+  }
 }
 
 @keyframes nameshift80 {
@@ -148,6 +167,15 @@ nav .sublink_container .sublink:hover {
   }
   to {
     padding-left: 180px;
+  }
+}
+
+@keyframes namefade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
