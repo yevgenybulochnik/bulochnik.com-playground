@@ -4,5 +4,5 @@ app.config(function($routeProvider){
   $routeProvider
     .when("/about", {
       templateUrl: "views/about.html"
-    })
+    });
 });

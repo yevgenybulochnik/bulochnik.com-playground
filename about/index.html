@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Eugene Bulochnik</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js" charset="utf-8"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js" charset="utf-8"></script>
     <link rel="StyleSheet" href="style.css" type="text/css">
   </head>
   <body ng-app = "about">
     <eu-nav></eu-nav>
-    <div id="content" ng-view></div>
+    <div class="content_background">
+      <div id="content" ng-view></div>
+    </div>
 
   </body>
   <script src="app.js" charset="utf-8"></script>
