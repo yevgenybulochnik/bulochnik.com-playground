@@ -10,7 +10,7 @@ app.controller("navctrl",function(){
          {link:"Electronic CV", isclicked: false}
        ]
       } ,
-      {link: "Climbing", isclicked: false, sublink: []},
+      {link: "Climbing", path: "#climbing", isclicked: false, sublink: []},
       {link: "Contact", iscliked:false,
       sublink:[
         {link: "Github", isclicked: false},

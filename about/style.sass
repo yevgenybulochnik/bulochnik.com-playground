@@ -12,7 +12,7 @@ body
   overflow: auto
 
 
-#content
+.content
   float: left
   .about
     float: left
@@ -23,6 +23,20 @@ body
     margin-left: 50px
     padding: 30px
     animation: aboutin 1s forwards
+.content.ng-enter
+  opacity: 0
+  position: absolute
+  transition: opacity 2s
+.content.ng-enter-active
+  opacity: 1
+  z-index: 5555
+.content.ng-leave
+  opacity: 1
+  position: absolute
+  transition: opacity 2s
+.content.ng-leave-active
+  opacity: 0
+  z-index: 6666
 
 nav
   //border: solid black 1px

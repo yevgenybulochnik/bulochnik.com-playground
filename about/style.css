@@ -12,11 +12,11 @@ body {
   overflow: auto;
 }
 
-#content {
+.content {
   float: left;
 }
 
-#content .about {
+.content .about {
   float: left;
   border: solid grey 1px;
   background-color: white;
@@ -25,6 +25,28 @@ body {
   margin-left: 50px;
   padding: 30px;
   animation: aboutin 1s forwards;
+}
+
+.content.ng-enter {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 2s;
+}
+
+.content.ng-enter-active {
+  opacity: 1;
+  z-index: 5555;
+}
+
+.content.ng-leave {
+  opacity: 1;
+  position: absolute;
+  transition: opacity 2s;
+}
+
+.content.ng-leave-active {
+  opacity: 0;
+  z-index: 6666;
 }
 
 nav {
