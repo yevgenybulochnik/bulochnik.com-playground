@@ -1,0 +1,26 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "description": "Nav menu website concept and about page ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yevjen/about.git"
+  },
+  "author": "Yevgeny Bulochnik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yevjen/about/issues"
+  },
+  "homepage": "https://github.com/Yevjen/about#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "node-static": "^0.7.7"
+  }
+}
