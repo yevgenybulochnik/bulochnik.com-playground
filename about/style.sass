@@ -4,7 +4,7 @@ body
 
 .content_background
   box-sizing: border-box
-  background-color: #f3f3f3
+  //background-color: #f3f3f3
   // background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxNic+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9J2dsb3cnIGN4PSc1MCUnIGN5PScwJScgcj0nNTAlJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6I2FhYTsnLz4KICAgICAgPHN0b3Agb2Zmc2V0PSc1MCUnIHN0eWxlPSdzdG9wLWNvbG9yOiNlNGU0ZTQ7Jy8+CiAgICAgIDxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3Atb3BhY2l0eTowOyBzdG9wLWNvbG9yOiNmM2YzZjM7Jy8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0nMTEwJScgeT0nLTUlJyB4PSctNSUnIGhlaWdodD0nMTEwJScgZmlsbD0ndXJsKCNnbG93KScvPgo8L3N2Zz4K)
   margin-left: 225px
   z-index: -1000
@@ -14,25 +14,26 @@ body
 
 .content
   float: left
+  width: 100%
   .about
     float: left
     border: solid grey 1px
     background-color: white
     box-shadow: 5px 5px 5px 0px grey
     margin-top: 100px
-    margin-left: 50px
+    margin-left: 5%
     padding: 30px
     animation: aboutin 1s forwards
 .content.ng-enter
   opacity: 0
-  position: absolute
+  z-index: 5555
   transition: opacity 2s
 .content.ng-enter-active
   opacity: 1
   z-index: 5555
 .content.ng-leave
   opacity: 1
-  position: absolute
+  z-index: 6666 
   transition: opacity 2s
 .content.ng-leave-active
   opacity: 0
@@ -125,11 +126,11 @@ nav
 
 @keyframes aboutin
   from
-    width: 0px
-    height: 0px
+    width: 0%
+    height: 0%
   to
-    width: 850px
-    height: 400px
+    width: 80%
+    height: 20%
 @keyframes nameshift80
   from
     padding-left: 0px
