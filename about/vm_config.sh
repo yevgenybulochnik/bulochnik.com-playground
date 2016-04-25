@@ -10,5 +10,6 @@ npm install -g bower
 npm install -g forever
 
 cd /bulochnik.com
+npm install
 forever start server.js
 echo "Forever is now running server.js on 172.69.69.69:3000" > /etc/motd
