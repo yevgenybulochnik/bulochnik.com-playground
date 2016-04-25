@@ -7,7 +7,7 @@ machine = [
     config:    "vm_config.sh",
     ip:        "172.69.69.69",
     synchost:  ".",
-    syncguest: "/bulochnik",
+    syncguest: "/bulochnik.com",
   }
 ]
 
