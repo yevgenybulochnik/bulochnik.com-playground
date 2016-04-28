@@ -22,6 +22,15 @@ app.controller("navctrl",function(){
     for(i=0;i<this.links.length;i++){
       this.links[i].isclicked = false;
     }
+    if(!contentlink.sublink.length){
+      for(i=0;i<this.links.length;i++){
+        if(this.links[i].sublink.length){
+          for(n=0;n<this.links[i].sublink.length;n++){
+            this.links[i].sublink[n].isclicked = false;
+          }
+        }
+      }
+    }
     if(contentlink.isclicked){
       contentlink.isclicked = false;
     }else{
@@ -41,7 +50,7 @@ app.controller("navctrl",function(){
     }else{
       itemlink.isclicked = true;
     }
-  }
+  };
 });
 
 app.directive('euNav',function(){
