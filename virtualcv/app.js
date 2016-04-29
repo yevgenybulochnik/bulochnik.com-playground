@@ -1,1 +1,1 @@
-var app = angular.module("virtualcv",["cvservice","contact"]);
+var app = angular.module("virtualcv",["cvservice","cv"]);
