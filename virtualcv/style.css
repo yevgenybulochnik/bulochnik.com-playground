@@ -1,21 +1,46 @@
+c-v {
+  display: inline-block;
+  border: solid red 1px;
+}
+
 contact {
-  border: solid black 1px;
+  border-bottom: double black 3px;
   float: left;
-  width: 50em;
+  width: 43em;
+  font-weight: bold;
   margin-left: 10%;
 }
 
 contact .contact_info {
   float: left;
-  border-right: solid black 2px;
+  width: 20em;
+  padding: 0.5em 0.5em 0em 0.5em;
+  border-right: double black 3px;
+}
+
+contact .contact_info .name {
+  font-size: 30;
+  font-weight: bold;
+}
+
+contact .contact_info .cred {
+  font-size: 30;
+  font-weight: bold;
 }
 
 contact .contact_address {
   float: left;
+  width: 20em;
+  padding: 2.5em 0em 0.5em 0.5em;
 }
 
 education {
   border: solid blue 1px;
+  float: left;
+  margin-left: 10%;
+}
+
+education > div {
   float: left;
 }
 

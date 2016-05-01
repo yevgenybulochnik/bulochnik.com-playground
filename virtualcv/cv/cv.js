@@ -9,6 +9,16 @@ app.controller("cv",function(cvservice){
   this.work = cvservice.w_exps;
 });
 
+app.directive("cV",function(){
+  return{
+    restrict: "E",
+    scope: {},
+    controller: "cv",
+    controllerAs: "ctrl",
+    templateUrl: "cv/cv.html"
+  };
+});
+
 app.directive("contact",function(){
   return{
     restrict: "E",
