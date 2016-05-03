@@ -6,14 +6,14 @@ c-v {
 contact {
   border-bottom: double black 3px;
   float: left;
-  width: 43em;
+  width: 44em;
   font-weight: bold;
   margin-left: 10%;
 }
 
 contact .contact_info {
   float: left;
-  width: 20em;
+  width: 21em;
   padding: 0.5em 0.5em 0em 0.5em;
   border-right: double black 3px;
 }
@@ -30,25 +30,35 @@ contact .contact_info .cred {
 
 contact .contact_address {
   float: left;
-  width: 20em;
+  width: 21em;
   padding: 2.5em 0em 0.5em 0.5em;
 }
 
 education {
-  border: solid blue 1px;
   float: left;
+  width: 44em;
   margin-left: 10%;
+  border-bottom: double black 3px;
 }
 
 education .edu {
-  width: 7em;
+  width: 7.5em;
   padding: 0.2em 0em 0em 0.5em;
   font-weight: bold;
 }
 
+education .college {
+  width: 26em;
+  padding-left: 0.2em;
+}
+
+education .college-dates {
+  font-style: italic;
+}
+
 education > div {
   float: left;
-  padding-top: 0.2em;
+  padding-top: 0.4em;
 }
 
 work-experiance {
