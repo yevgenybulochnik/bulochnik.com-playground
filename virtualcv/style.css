@@ -36,6 +36,7 @@ contact .contact_address {
 
 education {
   float: left;
+  clear: left;
   width: 44em;
   margin-left: 10%;
   border-bottom: double black 3px;
