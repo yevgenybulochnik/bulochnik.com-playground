@@ -1,1 +1,3 @@
-<div>{{ctrl.work[0].position}}</div>
+<div ng-repeat="experiance in ctrl.work">{{experiance.position}}
+  <li ng-repeat="duty in experiance.duties">{{duty}}</li>
+</div>
