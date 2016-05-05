@@ -1,3 +1,8 @@
-<div ng-repeat="experiance in ctrl.work">{{experiance.position}}
-  <li ng-repeat="duty in experiance.duties">{{duty}}</li>
+<div class="experiance" ng-repeat="experiance in ctrl.work">
+  <div class="label" ng-if="$index == 0" style="border-right: double black 3px">Work Experiance:</div>
+  <div class="label" ng-if="$index !==0"></div>
+  <div class="position">{{experiance.position}}
+    <li ng-repeat="duty in experiance.duties track by $index">{{duty}}</li>
+  </div>
+  <div class="dates">{{experiance.dates}}</div>
 </div>

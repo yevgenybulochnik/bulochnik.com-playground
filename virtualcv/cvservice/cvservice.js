@@ -20,13 +20,13 @@ app.service("cvservice",function(){
     {
       position: "Senior Pharmacist Decision Support Analyst",
       dates:"Feburary 2016-Present",
-      duties: []
+      duties: ["test","test","test"]
     },
     {
     position: "Providence Health and Services Anticogulation Clinic Clinical Pharmacy Specialist",
     dates: "July 2012-Feburary 2016",
     duties: [
-      "Provide fact to face patient centered care to 30-35 pateints daily",
+      "Provide face to face patient centered care to 30-35 pateints daily",
       "Adjust Warfarin dosing via point of care INR testing",
       "Developing patient care plans in collaboration with Primary Care Physicians",
       "Developing Lovenox bridge plans in collaboration with Primary Care Physicians and Cardiologists",

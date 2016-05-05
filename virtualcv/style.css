@@ -1,19 +1,19 @@
-c-v {
+.cv {
   display: inline-block;
-  border: solid red 1px;
+  border: solid black 1px;
 }
 
 contact {
   border-bottom: double black 3px;
   float: left;
-  width: 44em;
+  width: 46em;
   font-weight: bold;
   margin-left: 10%;
 }
 
 contact .contact_info {
   float: left;
-  width: 21em;
+  width: 22em;
   padding: 0.5em 0.5em 0em 0.5em;
   border-right: double black 3px;
 }
@@ -30,20 +30,20 @@ contact .contact_info .cred {
 
 contact .contact_address {
   float: left;
-  width: 21em;
+  width: 22em;
   padding: 3em 0em 0.5em 0.5em;
 }
 
 education {
   float: left;
   clear: left;
-  width: 44em;
+  width: 46em;
   margin-left: 10%;
   border-bottom: double black 3px;
 }
 
 education .edu {
-  width: 7.5em;
+  width: 8em;
   padding: 0.2em 0em 0em 0.5em;
   font-weight: bold;
 }
@@ -55,6 +55,7 @@ education .college {
 
 education .college-dates {
   font-style: italic;
+  float: right;
 }
 
 education > div {
@@ -63,7 +64,42 @@ education > div {
 }
 
 work-experiance {
-  border: solid red 1px;
   float: left;
   margin-left: 10%;
+}
+
+work-experiance .experiance {
+  float: left;
+  width: 46em;
+}
+
+work-experiance .experiance > div {
+  padding-top: 0.3em;
+}
+
+work-experiance .label {
+  width: 7.5em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-weight: bold;
+  float: left;
+}
+
+work-experiance .position {
+  width: 27em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  float: left;
+}
+
+work-experiance .position > li {
+  text-indent: -1em;
+  padding-left: 1.8em;
+  list-style-position: outside;
+  font-size: 85%;
+  margin-bottom: 0.2em;
+}
+
+work-experiance .dates {
+  float: right;
+  font-style: italic;
 }
