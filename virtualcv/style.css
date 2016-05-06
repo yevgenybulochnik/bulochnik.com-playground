@@ -63,28 +63,28 @@ education > div {
   padding-top: 0.3em;
 }
 
-work-experiance, intern-experiance {
+work-experiance, intern-experiance, appe-experiance {
   float: left;
   margin-left: 10%;
 }
 
-work-experiance .experiance, intern-experiance .experiance {
+work-experiance .experiance, intern-experiance .experiance, appe-experiance .experiance {
   float: left;
   width: 46em;
 }
 
-work-experiance .experiance > div, intern-experiance .experiance > div {
+work-experiance .experiance > div, intern-experiance .experiance > div, appe-experiance .experiance > div {
   padding-top: 0.3em;
 }
 
-work-experiance .label, intern-experiance .label {
+work-experiance .label, intern-experiance .label, appe-experiance .label {
   width: 7.5em;
   padding: 0.2em 0em 0em 0.5em;
   font-weight: bold;
   float: left;
 }
 
-work-experiance .position, intern-experiance .position {
+work-experiance .position, intern-experiance .position, appe-experiance .position {
   width: 27em;
   padding-left: 0.5em;
   padding-top: 0.3em;
@@ -92,16 +92,26 @@ work-experiance .position, intern-experiance .position {
   font-weight: bold;
 }
 
-work-experiance .position > li, intern-experiance .position > li {
+work-experiance .position > li, intern-experiance .position > li, appe-experiance .position > li {
   text-indent: -1em;
   padding-left: 1.8em;
   list-style-position: outside;
   font-size: 85%;
   font-weight: normal;
+  margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
 
-work-experiance .dates, intern-experiance .dates {
+work-experiance .dates, intern-experiance .dates, appe-experiance .dates {
   float: right;
   font-style: italic;
+}
+
+work-experiance .presentations, intern-experiance .presentations, appe-experiance .presentations {
+  padding-left: 3em !important;
+}
+
+.border {
+  border-top: double black 3px;
+  width: 46em;
 }

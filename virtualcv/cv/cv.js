@@ -7,8 +7,10 @@ app.controller("cv",function(cvservice){
   this.education = cvservice.edu;
   this.work_visible = true;
   this.work = cvservice.w_exps;
-  this.intern_visible= true;
+  this.intern_visible = true;
   this.intern = cvservice.in_exps;
+  this.appe_visible = true;
+  this.appe = cvservice.appe;
 });
 
 // app.directive("cV",function(){
@@ -58,5 +60,15 @@ app.directive("internExperiance",function(){
     controller: "cv",
     controllerAs: "ctrl",
     templateUrl: "cv/intern.html"
+  };
+});
+
+app.directive("appeExperiance",function(){
+  return{
+    restrict: "E",
+    scope: {},
+    controller: "cv",
+    controllerAs: "ctrl",
+    templateUrl: "cv/appe.html"
   };
 });

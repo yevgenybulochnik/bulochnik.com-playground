@@ -34,7 +34,7 @@ app.service("cvservice",function(){
       "Patient On-Call responsibilities",
       "Developing quick forms within Epic Hyperspace to standardize and increase efficiency of workflows",
       "Developing Excel spreadsheets with visual basic coding, including a Lovenox bridging algorithm, and visual productiviy report for each clinic",
-      "Therapeutic Review of peri-operative management of anticoagulation to regional clinic supervisors and regional manager"
+      "Therapeutic review of peri-operative management of anticoagulation presented to regional clinic supervisors and regional manager"
     ]
   }
   ];
@@ -66,6 +66,43 @@ this.appe = [
     presentations: [
       "Association of ICU or hospital admission with unintentional discontinuation of medications for chronic diseases journal club",
       "Pleotropic effects of statins presentation"
+    ]
+  },
+  {
+    site: "Partners in Health Care Pain Management Clinic",
+    dates: "Feburary 2012",
+    preceptor: "Louann Hart ARNP",
+    location: "Des Moines, IA",
+    duties: [
+      "Managed pain therapy regimens including dosage adjustments, therapeutic interchanges and recommendations for supplemental therapy",
+      "Performed administrative functions including submission and documentation for prior authorizations",
+      "Completed medication reconciliations on newly consulted patients"
+  ]
+  },
+  {
+    site: "Mercy Hospital Medical Center Oncology Rotation",
+    dates: "January 2012",
+    preceptor: "Julie Suiter PharmD",
+    location: "Des Moines, IA",
+    duties: [
+      "Performed TPN management including caloric calculations, substrate adjustments, electrolyte adjustments and writing orders",
+      "Managed vancomycin dosing including ordering troughs and assessing appropriate use",
+      "Participated in weekly oncology topic discussions"
+    ]
+  },
+  {
+    site: "Kaiser Permanente Community Practice Rotation",
+    dates: "November 2012",
+    preceptor: "Amy Pazand PharmD",
+    location: "Denver, CO",
+    duties: [
+      "Counseled patients on drug administration, ADRs, therapeutic goals, and adherence",
+      "Entered orders, filled prescriptions, monitored inventory and performed prescription transfers",
+      "Performed renal dosage adjustment on prescribed antibiotics",
+      "Presentations to pharmacy staff"
+    ],
+    presentations: [
+      "Use of Cialis(tadalafil) for BPH journal club"
     ]
   }
 ];
