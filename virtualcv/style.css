@@ -63,43 +63,45 @@ education > div {
   padding-top: 0.3em;
 }
 
-work-experiance {
+work-experiance, intern-experiance {
   float: left;
   margin-left: 10%;
 }
 
-work-experiance .experiance {
+work-experiance .experiance, intern-experiance .experiance {
   float: left;
   width: 46em;
 }
 
-work-experiance .experiance > div {
+work-experiance .experiance > div, intern-experiance .experiance > div {
   padding-top: 0.3em;
 }
 
-work-experiance .label {
+work-experiance .label, intern-experiance .label {
   width: 7.5em;
   padding: 0.2em 0em 0em 0.5em;
   font-weight: bold;
   float: left;
 }
 
-work-experiance .position {
+work-experiance .position, intern-experiance .position {
   width: 27em;
   padding-left: 0.5em;
   padding-top: 0.3em;
   float: left;
+  font-weight: bold;
 }
 
-work-experiance .position > li {
+work-experiance .position > li, intern-experiance .position > li {
   text-indent: -1em;
   padding-left: 1.8em;
   list-style-position: outside;
   font-size: 85%;
+  font-weight: normal;
   margin-bottom: 0.2em;
 }
 
-work-experiance .dates {
+work-experiance .dates, intern-experiance .dates {
   float: right;
   font-style: italic;
 }
