@@ -104,6 +104,68 @@ this.appe = [
     presentations: [
       "Use of Cialis(tadalafil) for BPH journal club"
     ]
+  },
+  {
+    site: "Northwestern Memorial Hospital Neuro-Critical Care",
+    dates: "October 2011",
+    preceptor: "Kimberly Franklin PharmD",
+    location: "Chicago,IL",
+    duties: [
+      "Evaluated  patients during neurosurgical and critical care rounds with medical and pharmacy residents",
+      "Performed daily medication reconciliations",
+      "Critical care topic discussions",
+      "Presentations to clinic pharmacy specialists and staff pharmacists"
+    ],
+    presentations: [
+      "Early verses late TPN administration journal club",
+      "Cerebral vasospasm case presentation"
+    ]
+  },
+  {
+    site: "Mercy Hospital Medical Center Acute Care Rotation",
+    dates: "September 2011",
+    preceptor: "Erik Maki PharmD",
+    location: "Des Monies, IA",
+    duties: [
+      "Evaluated patient's drug therapy regimens based on admission diagnosis and past medical history",
+      "Communicated drug therapy recommendations to physicians",
+      "Participated in daily pharmacy topic discussions",
+      "Presntations to clinical pharmacy specialists and students"
+    ],
+    presentations: ["Review of Brillinta(ticagrelor)"]
+  },
+  {
+    site: "Iowa Methodist Medical Hospital Anticoagulation Clinic",
+    dates: "August 2011",
+    preceptor: "Lynn Young PharmD",
+    location: "Des Moines, IA",
+    duties: [
+      "Performed daily warfarin and lovenox education",
+      "Reviewed rehabilitation floor patient charts and provided therapy recommendations",
+      "Presentations to pharmacy staff and students",
+    ],
+    presentations: [
+      "Xarelto(rivaroxaban) verses warfarin Record-2 trial journal club",
+      "Warfarin necrosis and purple toe syndrome topic discussion"
+    ]
+  },
+  {
+    site: "Waterloo Covenant Hospital",
+    dates: "July 2011",
+    preceptor: "Joe Moore PharmD",
+    location: "Des Moines, IA",
+    duties: [
+      "Participated in general hospital operations including order entry, formulary management, and inventory management",
+      "Prepared sterile products and IV medications",
+      "Peformed pharmacokinetic monitoring and dosing of warfarin and vancomycin",
+      "Radiology and surgery shadowing",
+      "Presentations and Projects"
+    ],
+    presentations: [
+      "Computer generated medication errors journal club",
+      "Case presentation rhabdomyolysis in a 22 year old",
+      "Zosyn(piperacillin and tazobactam) administration report"
+    ]
   }
 ];
 });
