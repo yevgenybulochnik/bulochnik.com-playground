@@ -79,8 +79,16 @@ work-experiance .experiance > div, intern-experiance .experiance > div, appe-exp
 
 work-experiance .label, intern-experiance .label, appe-experiance .label {
   width: 7.5em;
+  height: 1.4em;
   padding: 0.2em 0em 0em 0.5em;
   font-weight: bold;
+  float: left;
+}
+
+work-experiance .location, intern-experiance .location, appe-experiance .location {
+  width: 7.5em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-style: italic;
   float: left;
 }
 
@@ -105,6 +113,8 @@ work-experiance .position > li, intern-experiance .position > li, appe-experianc
 work-experiance .dates, intern-experiance .dates, appe-experiance .dates {
   float: right;
   font-style: italic;
+  width: 8em;
+  text-align: right;
 }
 
 work-experiance .presentations, intern-experiance .presentations, appe-experiance .presentations {

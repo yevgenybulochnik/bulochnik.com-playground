@@ -20,7 +20,11 @@ app.service("cvservice",function(){
     {
       position: "Senior Pharmacist Decision Support Analyst",
       dates:"Feburary 2016-Present",
-      duties: ["test","test","test"]
+      duties: [
+        "Review and validate pharmacy clinical analytic data",
+        "Built reports using access, excel, and tablau",
+        "Written SQL querys to pull clinical pharmacy datasets"
+      ]
     },
     {
     position: "Providence Health and Services Anticogulation Clinic Clinical Pharmacy Specialist",
@@ -59,7 +63,7 @@ this.appe = [
     duties: [
       "Monitored INRS and adjusted warfarin doses for clinic patients",
       "Managed diabetes care through weekly telephone consultations, insulin adjustments, and therapy recommendations",
-      "Developed a diabestes monitoring program to track consultations and patient outcomes using excel/VBA",
+      "Developed a diabetes monitoring program to track consultations and patient outcomes using excel/VBA",
       "Collaborated with physicians on management of chronic disease states",
       "Presentations to physicians and nursing staff"
     ],
