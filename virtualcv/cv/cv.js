@@ -72,3 +72,13 @@ app.directive("appeExperiance",function(){
     templateUrl: "cv/appe.html"
   };
 });
+
+app.directive("leadership",function(){
+  return{
+    restrict: "E",
+    scope: {},
+    controller: "cv",
+    controllerAs: "ctrl",
+    templateUrl: "cv/leadership.htm;"
+  };
+});
