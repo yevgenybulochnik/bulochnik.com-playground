@@ -123,6 +123,11 @@ work-experiance .presentations, intern-experiance .presentations, appe-experianc
   padding-left: 3em !important;
 }
 
+leadership {
+  float: left;
+  margin-left: 10%;
+}
+
 .border {
   border-top: double black 3px;
   width: 46em;

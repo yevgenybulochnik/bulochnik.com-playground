@@ -79,6 +79,6 @@ app.directive("leadership",function(){
     scope: {},
     controller: "cv",
     controllerAs: "ctrl",
-    templateUrl: "cv/leadership.htm;"
+    templateUrl: "cv/leadership.html"
   };
 });
