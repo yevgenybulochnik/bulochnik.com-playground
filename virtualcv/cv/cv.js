@@ -11,6 +11,8 @@ app.controller("cv",function(cvservice){
   this.intern = cvservice.in_exps;
   this.appe_visible = true;
   this.appe = cvservice.appe;
+  this.leadership_visible = true;
+  this.leadership = cvservice.leadership;
 });
 
 // app.directive("cV",function(){

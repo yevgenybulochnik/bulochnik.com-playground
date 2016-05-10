@@ -172,4 +172,31 @@ this.appe = [
     ]
   }
 ];
+this.leadership = [
+  {
+    name: "Academy of Manged Care Pharmacy",
+    activities: [
+      {name: "Chapter President 2009-2011, Drake University"},
+      {name: "Local 2011 Pharmacy & Therapeutics Competition 1st Place:", presentation: "Therapeutic review of antiplatelet agent Effient(Prasugrel)"},
+      {name: "National 2010 Pharmacy & Therapeutics Finalist: Presented at AMCP National conference San Diego, CA", presentation: "Therapeutic class review of platelet growth factors Nplate(romiplostim) and Promacta (eltrombopag)"},
+      {name: "National 2009 Pharmacy & Therapeutics Competition 3rd place: Presented at AMCP National conference Orlando, FL", presentation: "Therapeutic review of Tysabri(natalizumab)"}
+    ],
+    dates: "September 2008 - 2011"
+  },
+  {
+    name: "Phi Lambda Sigma Honorary Society",
+    activities: [
+      {name: "Chapter Vice President 2010"}
+    ],
+    dates: "September 2009-Present"
+  },
+  {
+    name: "Iowa Pharmacy Association",
+    dates: "September 2010-2012",
+  },
+  {
+    name: "P1 Orientation Speaker",
+    dates: "August 2009"
+  }
+];
 });

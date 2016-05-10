@@ -128,6 +128,38 @@ leadership {
   margin-left: 10%;
 }
 
+leadership .activity {
+  float: left;
+  width: 46em;
+}
+
+leadership .activity > div {
+  padding-top: 0.3em;
+}
+
+leadership .label {
+  width: 7.5em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-weight: bold;
+  float: left;
+}
+
+leadership .role {
+  width: 27em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  float: left;
+  font-weight: bold;
+}
+
+leadership .dates {
+  float: right;
+  font-style: italic;
+  width: 10em;
+  text-align: right;
+}
+
 .border {
   border-top: double black 3px;
   width: 46em;

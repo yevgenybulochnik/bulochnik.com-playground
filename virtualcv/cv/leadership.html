@@ -1,2 +1,7 @@
 <div class="border"></div>
-<div>test</div>
+<div class="activity" ng-repeat="activity in ctrl.leadership">
+  <div class="label" ng-if="$index == 0" style="border-right: double black 3px;">Leadership:</div>
+  <div class="label" ng-if="$index !==0"></div>
+  <div class="role">{{activity.name}}</div>
+  <div class="dates">{{activity.dates}}</div>
+</div>
