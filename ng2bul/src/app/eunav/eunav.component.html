@@ -1,0 +1,6 @@
+<nav>
+    <div class="eulink" *ngFor = "let button of links">
+        {{button.link}}
+        <div class="eusubblink" *ngFor="let subbutton of button.sublink">{{subbutton.link}}</div>
+    </div>
+</nav>

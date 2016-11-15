@@ -1,0 +1,39 @@
+nav {
+    width: 200px;
+    border-right: solid black 1px;
+    height: 100%;
+    padding-top: 250px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    cursor:pointer;
+}
+
+.eulink {
+    padding-left: 20px; 
+    font-size: x-large;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.eulink:hover {
+    background-color: black;
+    color: white;
+}
+
+nav:hover .eusubblink{
+    height: 20px;
+    opacity: 1;
+}
+
+.eusubblink {
+    padding-left: 20px;
+    font-size: large;
+    height: 0px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.eusubblink:hover {
+    color: orange;
+}
