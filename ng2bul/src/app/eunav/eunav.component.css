@@ -10,6 +10,11 @@ nav {
     cursor:pointer;
 }
 
+nav:hover .eusubblink{
+    height: 20px;
+    opacity: 1;
+}
+
 .eulink {
     padding-left: 20px; 
     font-size: x-large;
@@ -19,11 +24,6 @@ nav {
 .eulink:hover {
     background-color: black;
     color: white;
-}
-
-nav:hover .eusubblink{
-    height: 20px;
-    opacity: 1;
 }
 
 .eusubblink {
@@ -36,4 +36,14 @@ nav:hover .eusubblink{
 
 .eusubblink:hover {
     color: orange;
+}
+
+.active {
+    background-color: black !important;
+    color: white !important;
+}
+
+.active .eusubblink{
+    height: 20px !important;
+    opacity: 1 !important;
 }

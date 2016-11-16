@@ -27,16 +27,32 @@ class eubutton {
     this.sublink = this.gen_sublink(sublink);
   }
   
-  gen_sublink(sublink) {
-    if(sublink){
-      var sublink_array = [];
-      for(var i=0; i<sublink.length;i++){
-        sublink_array.push({link:sublink[i], sublink_isactive:false});
+    gen_sublink(sublink) {
+      if(sublink){
+        var sublink_array = [];
+        for(var i=0; i<sublink.length;i++){
+          sublink_array.push({link:sublink[i], sublink_isactive:false});
+        }
+        return sublink_array
+      }else{
+        return null 
       }
-      return sublink_array
-    }else{
-      return null 
     }
-  }
-  
+    
+    activate(){
+      if(this.link_isactive == false){
+        this.link_isactive = true;
+      }else{
+        this.link_isactive = false;
+      };
+      console.log(this.link_isactive)
+    }
+    
+    sub_activate(subbutton){
+      if(subbutton.sublink_isactive){
+        subbutton.sublink_isactive = true;
+      }else{
+        subbutton.sublink_isactive = false;
+      }
+    } 
 }
