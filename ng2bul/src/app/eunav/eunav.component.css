@@ -47,3 +47,7 @@ nav:hover .eusubblink{
     height: 20px !important;
     opacity: 1 !important;
 }
+
+.sub_active{
+    color: orange !important;
+}

@@ -15,6 +15,21 @@ export class EunavComponent{
       ]
   }
 
+  eu_toggle(button){
+   if(button.sublink){
+     this.activate(button);
+     
+   } 
+    this.activate(button)
+  }
+  
+   activate(button){
+     button.link_isactive = true;
+   }
+   
+   deactivate(button){
+     button.link_isactive = false; 
+   }
 }
 
 class eubutton {
@@ -31,28 +46,11 @@ class eubutton {
       if(sublink){
         var sublink_array = [];
         for(var i=0; i<sublink.length;i++){
-          sublink_array.push({link:sublink[i], sublink_isactive:false});
+          sublink_array.push({link:sublink[i], link_isactive:false});
         }
         return sublink_array
       }else{
         return null 
       }
     }
-    
-    activate(){
-      if(this.link_isactive == false){
-        this.link_isactive = true;
-      }else{
-        this.link_isactive = false;
-      };
-      console.log(this.link_isactive)
-    }
-    
-    sub_activate(subbutton){
-      if(subbutton.sublink_isactive){
-        subbutton.sublink_isactive = true;
-      }else{
-        subbutton.sublink_isactive = false;
-      }
-    } 
 }
