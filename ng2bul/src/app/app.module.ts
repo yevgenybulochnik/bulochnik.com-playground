@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EunavComponent } from './eunav/eunav.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EunavComponent
+    EunavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

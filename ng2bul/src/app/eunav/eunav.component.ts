@@ -15,16 +15,27 @@ export class EunavComponent{
       ]
   }
 
-  eu_toggle(button){
-   if(button.sublink){
-     this.activate(button);
-     
-   } 
-    this.activate(button)
+  eu_reset(){
+    for(var i =0;i<this.links.length;i++){
+      this.deactivate(this.links[i])
+      if(this.links[i].sublink){
+        for(var n=0;n<this.links[i].sublink.length;n++){
+          this.deactivate(this.links[i].sublink[n])
+        }  
+      }
+    }
   }
   
    activate(button){
+     if(button.sublink == null){
+      this.eu_reset() 
+     }
      button.link_isactive = true;
+   }
+   
+   sub_activate(subbutton){
+     this.eu_reset();
+     subbutton.link_isactive = true; 
    }
    
    deactivate(button){
