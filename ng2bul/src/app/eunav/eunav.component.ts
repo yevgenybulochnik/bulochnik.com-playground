@@ -3,15 +3,18 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'eu-nav',
   templateUrl: './eunav.component.html',
-  styleUrls: ['./eunav.component.css']
+  styleUrls: ['./eunav.component.css'],
 })
+
 export class EunavComponent{
+  links: eubutton[];
   constructor() { 
     this.links= [
       new eubutton("About"),
       new eubutton("Coding",["Virtual CV","Note Editor"]),
       new eubutton("Climbing"),
-      new eubutton("Contact",["Github","Email"]),
+      new eubutton("Photography",["City","Nature","Food"]),
+      new eubutton("Contact")
       ]
   }
 
@@ -49,6 +52,7 @@ class eubutton {
   link_isactive: boolean;
   constructor(link,sublink?){
     this.link = link;
+    this.link_path= "/"+link;
     this.link_isactive = false; 
     this.sublink = this.gen_sublink(sublink);
   }
