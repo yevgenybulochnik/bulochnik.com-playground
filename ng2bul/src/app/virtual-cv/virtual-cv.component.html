@@ -1,3 +1,64 @@
-<div>
-  virtual-cv works!
+<div class = "cv">
+  <div class ='contact'>
+    <div class="contact_info">
+      <div class="name">{{contact.name}}</div>
+      <div class="cred">{{contact.cred}}</div>
+      <!--<div> Cell: {{contact.cell}}</div> -->
+      <div>{{contact.licence}}</div>
+      <div>{{contact.email}}</div>
+    </div>
+    <div class="contact_address">Permanent Address:<br>{{contact.address}}</div>
+  </div>
+  
+  <div class="education">
+    <div class="edu">Education:</div>
+    <div class="college">{{edu.degree}}, GPA {{edu.gpa}} {{edu.designation}}<br><i>{{edu.school}}</i></div>
+    <div class="college-dates">{{edu.dates}}</div>
+  </div>
+  
+  <div class="work-experiance">
+    <div class="experiance" *ngFor="let experiance of w_exps;let i = index">
+      <div class="label" *ngIf="i == 0" style="border-right: double black 3px;height: 2.3em">Work Experiance:</div>
+      <div class="label" *ngIf="i !==0"></div>
+      <div class="position">{{experiance.position}}
+        <li *ngFor="let duty of experiance.duties">{{duty}}</li>
+      </div>
+      <div class="dates">{{experiance.dates}}</div>
+    </div>
+  </div>
+  
+  <div class="intern-experiance">
+    <div class="experiance" *ngFor="let experiance of in_exps;let i = index">
+      <div class="label" *ngIf="i == 0">Intern Experiance:</div>
+      <div class="label" *ngIf="i !==0"></div>
+      <div class="position">{{experiance.position}}
+        <li *ngFor="let duty of experiance.duties">{{duty}}</li>
+      </div>
+      <div class="dates">{{experiance.dates}}</div>
+    </div>
+  </div>
+  
+  <div class="appe-experiance">
+    <div class='border'></div>
+    <div class="experiance" *ngFor="let experiance of appe_exps;let i = index">
+      <div class="label" *ngIf="i == 0" style="border-right: double black 3px">APPE Rotations:<div style="font-style: italic;font-weight:normal">Des Moines, IA</div></div>
+      <div class="location" *ngIf="i !==0">{{experiance.location}}</div>
+      <div class="position">{{experiance.site}}
+        <li *ngFor=" let duty of experiance.duties">{{duty}}</li>
+        <li class = "presentations" *ngFor="let presentation of experiance.presentations">{{presentation}}</li>
+    </div>
+    <div class="dates">{{experiance.dates}}</div>
+    <div style="float: right;font-style: italic;font-size: small">{{experiance.preceptor}}</div>
+    </div>
+  </div>
+  
+  <div class="leadership">
+    <div class="border"></div>
+    <div class="activity" *ngFor=" let activity of leadership; let i = index">
+      <div class="label" *ngIf="i == 0" style="border-right: double black 3px;">Leadership:</div>
+      <div class="label" *ngIf="i !==0"></div>
+      <div class="role">{{activity.name}}</div>
+      <div class="dates">{{activity.dates}}</div>
+    </div>
+  </div>
 </div>
