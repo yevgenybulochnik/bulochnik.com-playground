@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { EunavComponent } from './eunav/eunav.component';
 import { AboutComponent } from './about/about.component';
 import { VirtualCvComponent } from './virtual-cv/virtual-cv.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const appRoutes: Routes = [
-  {path:'About', component: AboutComponent},
-  {path:'Coding', component: VirtualCvComponent}
+  {path:'about', component: AboutComponent},
+  {path:'virtualcv', component: VirtualCvComponent},
+  {path:'404',component: NotFoundComponent},
+  {path: '**', redirectTo:"/404"}
 ];
 
 @NgModule({
@@ -21,6 +24,7 @@ const appRoutes: Routes = [
     EunavComponent,
     AboutComponent,
     VirtualCvComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ export class cvprovider {
     w_exps: any;
     in_exps: any;
     appe_exps: any;
+    leadership: any;
     constructor(){
         this.contact = {
             name: "Eugene Bulochnik",

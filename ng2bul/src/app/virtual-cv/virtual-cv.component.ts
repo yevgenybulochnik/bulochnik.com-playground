@@ -29,6 +29,7 @@ export class VirtualCvComponent{
   w_exps: any;
   in_exps: any;
   appe_exps: any;
+  leadership: any;
   constructor(cvprovider: cvprovider) { 
     this.contact = cvprovider.contact;
     this.edu = cvprovider.edu;

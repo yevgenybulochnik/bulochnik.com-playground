@@ -52,20 +52,40 @@ class eubutton {
   link_isactive: boolean;
   constructor(link,sublink?){
     this.link = link;
-    this.link_path= "/"+link;
+    this.link_path= this.gen_path(link);
     this.link_isactive = false; 
     this.sublink = this.gen_sublink(sublink);
+    this.test =console.log(this.gen_path(link))
   }
   
     gen_sublink(sublink) {
       if(sublink){
         var sublink_array = [];
         for(var i=0; i<sublink.length;i++){
-          sublink_array.push({link:sublink[i], link_isactive:false});
+          sublink_array.push({link:sublink[i], link_isactive:false, link_path: this.gen_path(sublink[i])});
         }
+        this.link_path = null; 
         return sublink_array
       }else{
         return null 
       }
     }
+    
+    gen_path(linkstring){
+      return "/"+linkstring.toLowerCase().replace(" ","")
+    }
+    
+    // gen_path(linkname){
+    // var path_obj;
+    // var path; 
+    // var path_component;
+    // var linknameLower = linkname.toLowerCase();
+     
+    // path = "/"+ linknameLower.replace(" ","");
+    // path_component = linkname.replace(" ","")+"Component";
+    // path_obj = {path: path, component: path_component};
+    // console.log(path_obj)
+    // console.log(document)
+    // return path_obj
+    // }
 }
