@@ -1,11 +1,11 @@
 import { Component, style, animate, transition, state, trigger } from '@angular/core';
 
 @Component({
-  selector: 'eu-not-found',
-  host: {'[@routeAnimation]':'true'},
+  selector: 'eu-pagestart',
+  host: {'[@routeAnimation]': 'true'},
   template: `
     <div>
-      <p>Opps! looks like im still working on this part.</p> 
+      Bulochnik.com
     </div>
   `,
   styles: [`
@@ -13,20 +13,17 @@ import { Component, style, animate, transition, state, trigger } from '@angular/
     margin-left: 200px;
     display: block;
     position: absolute;
-    z-index:-1000;
-    border-left: solid black 15px;
+    z-index: -1000;
     height: 100%
   }
   div{
-    padding-left: 40px;
+    padding-left: 130px;
     padding-top: 150px;
-  }
-  p{
-    font-family: Impact, Charcoal, san-serif;
-    font-size: x-large;
+    font-family: Impact, charcoal, snas-serif;
+    font-size: 7em; 
   }
   `],
-  animations: [
+  animations:[
     trigger('routeAnimation', [
       state('*', style({transform: 'translateX(0)', opacity: 1})),
       transition('void => *', [
@@ -40,8 +37,11 @@ import { Component, style, animate, transition, state, trigger } from '@angular/
         }))
       )
     ])
-    ]
+  ]
 })
-export class NotFoundComponent {
+
+export class PageStartComponent{
+
   constructor() { }
+
 }

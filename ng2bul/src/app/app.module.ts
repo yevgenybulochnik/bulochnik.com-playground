@@ -9,9 +9,11 @@ import { EunavComponent } from './eunav/eunav.component';
 import { AboutComponent } from './about/about.component';
 import { VirtualCvComponent } from './virtual-cv/virtual-cv.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PageStartComponent } from './pagestart/pagestart.component';
 
 
 const appRoutes: Routes = [
+  {path:'', component: PageStartComponent},
   {path:'about', component: AboutComponent},
   {path:'virtualcv', component: VirtualCvComponent},
   {path:'404',component: NotFoundComponent},
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
     AboutComponent,
     VirtualCvComponent,
     NotFoundComponent,
+    PageStartComponent,
   ],
   imports: [
     BrowserModule,

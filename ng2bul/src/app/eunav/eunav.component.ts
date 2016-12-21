@@ -55,7 +55,6 @@ class eubutton {
     this.link_path= this.gen_path(link);
     this.link_isactive = false; 
     this.sublink = this.gen_sublink(sublink);
-    this.test =console.log(this.gen_path(link))
   }
   
     gen_sublink(sublink) {
