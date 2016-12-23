@@ -10,12 +10,15 @@ import { AboutComponent } from './about/about.component';
 import { VirtualCvComponent } from './virtual-cv/virtual-cv.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageStartComponent } from './pagestart/pagestart.component';
+import { NoteEditorComponent } from './noteeditor/note-editor.component';
+import { RiskCalcComponent } from './risk-calc/risk-calc.component';
 
 
 const appRoutes: Routes = [
   {path:'', component: PageStartComponent},
   {path:'about', component: AboutComponent},
   {path:'virtualcv', component: VirtualCvComponent},
+  {path:'noteeditor', component: NoteEditorComponent},
   {path:'404',component: NotFoundComponent},
   {path: '**', redirectTo:"/404"}
 ];
@@ -28,6 +31,8 @@ const appRoutes: Routes = [
     VirtualCvComponent,
     NotFoundComponent,
     PageStartComponent,
+    NoteEditorComponent,
+    RiskCalcComponent,
   ],
   imports: [
     BrowserModule,

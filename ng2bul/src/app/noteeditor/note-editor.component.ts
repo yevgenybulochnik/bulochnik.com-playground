@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { routeAnimation } from '../pagetransition';
+import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
 
 @Component({
   selector: 'eu-note-editor',
   host: {'[@routeAnimation]': 'true'},
   template: `
     <div>
-      noteeditor Works!
+      <risk-calc [type]='chadsvasc'></risk-calc>
+      <risk-calc [type]='hasbled'></risk-calc>
     </div>
   `,
   styles: [`
@@ -23,10 +25,14 @@ import { routeAnimation } from '../pagetransition';
     padding-top: 150px;
   }
   `],
-  animations: [routeAnimation]
+  animations: [routeAnimation],
+  providers:[CHADS_vasc,HasBled]
 })
 export class NoteEditorComponent {
 
-  constructor() { }
+  constructor(CHADS_vasc:CHADS_vasc, HasBled:HasBled) {
+    this.chadsvasc = CHADS_vasc;
+    this.hasbled = HasBled; 
+  }
 
 }
