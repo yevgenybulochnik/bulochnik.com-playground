@@ -11,7 +11,6 @@ import { Component, Input } from '@angular/core';
   styles: [`
   :host{
     float: left;
-    clear: left; 
     margin: 5px;
     padding: 10px;
     border: solid grey 1px; 

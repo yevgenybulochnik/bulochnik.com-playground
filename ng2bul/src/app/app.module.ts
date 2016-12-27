@@ -13,6 +13,8 @@ import { PageStartComponent } from './pagestart/pagestart.component';
 import { NoteEditorComponent } from './noteeditor/note-editor.component';
 import { RiskCalcComponent } from './risk-calc/risk-calc.component';
 
+import { QuillModule } from '/home/ubuntu/workspace/ng2bul/node_modules/ng2-quill/src/quill/quill.module';
+
 
 const appRoutes: Routes = [
   {path:'', component: PageStartComponent},
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    QuillModule
   ],
   providers: [],
   bootstrap: [AppComponent]
