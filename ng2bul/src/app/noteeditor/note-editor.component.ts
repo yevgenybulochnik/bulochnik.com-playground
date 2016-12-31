@@ -7,9 +7,9 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
   host: {'[@routeAnimation]': 'true'},
   template: `
     <div>
-      <risk-calc [type]='chadsvasc'></risk-calc>
+      <risk-calc (notifyeditor)="getrisk($event)" [type]='chadsvasc'></risk-calc>
       <risk-calc [type]='hasbled'></risk-calc>
-      <quill-editor [modules]='buttons' [ngModel]="test"></quill-editor>
+      <quill-editor (ngModelChange)="textchange()" [modules]='buttons' [(ngModel)]="progressnote"></quill-editor>
     </div>
   `,
   styles: [`
@@ -38,12 +38,21 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
   providers:[CHADS_vasc,HasBled]
 })
 export class NoteEditorComponent {
-
+  chadsvasc: CHADS_vasc;
+  hasbled: HasBled;
+  buttons: any;
+  progressnote: string;
   constructor(CHADS_vasc:CHADS_vasc, HasBled:HasBled) {
     this.chadsvasc = CHADS_vasc;
     this.hasbled = HasBled; 
     this.buttons = {toolbar: [['bold','italic','underline','strike'],[{ 'list': 'ordered'}, { 'list': 'bullet' }]]};
-    this.test = "helloworld"
+    this.progressnote = "helloworld"
   }
-
+  getrisk(evt){
+    this.progressnote = evt
+    console.log(this)
+  }
+  textchange(){
+    console.log(this.progressnote)
+  }
 }

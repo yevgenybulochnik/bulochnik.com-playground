@@ -48,6 +48,7 @@ export class EunavComponent{
 
 class eubutton {
   link: string;
+  link_path: string;
   sublink: string[];
   link_isactive: boolean;
   constructor(link,sublink?){
