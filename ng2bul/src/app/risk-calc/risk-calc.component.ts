@@ -52,7 +52,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class RiskCalcComponent{
   @Input() type;
-  @Output() notifyeditor: EventEmitter<any> =new EventEmitter(); 
+  @Output() riskassessment: EventEmitter<any> =new EventEmitter(); 
   score: number; 
   percent: string; 
   clicked_factors: string[];
@@ -73,7 +73,7 @@ export class RiskCalcComponent{
      this.clicked_factors.push(risk.abv)
    }
    this.percent = this.type.scores[this.score]
-   this.notifyeditor.emit(this.gen_assessment())
+   this.riskassessment.emit(this.gen_assessment())
   }
   
   gen_assessment(){
