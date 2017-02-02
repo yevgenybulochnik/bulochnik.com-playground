@@ -10,6 +10,7 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
       <risk-calc (riskassessment)="getchadsvasc($event)" [type]='chadsvasc'></risk-calc>
       <risk-calc (riskassessment)="gethasbled($event)" [type]='hasbled'></risk-calc>
       <quill-editor (onEditorCreated)="seteditor($event)" [modules]='buttons'></quill-editor>
+      <subjective></subjective>
     </div>
   `,
   styles: [`
