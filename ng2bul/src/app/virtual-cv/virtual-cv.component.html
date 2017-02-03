@@ -18,7 +18,7 @@
   
   <div class="work-experiance">
     <div class="experiance" *ngFor="let experiance of w_exps;let i = index">
-      <div class="label" *ngIf="i == 0" style="border-right: double black 3px;height: 2.3em">Work Experiance:</div>
+      <div class="label" *ngIf="i == 0" style="border-right: double black 3px;height: 2.3em">Work Experience:</div>
       <div class="label" *ngIf="i !==0"></div>
       <div class="position">{{experiance.position}}
         <li *ngFor="let duty of experiance.duties">{{duty}}</li>
@@ -29,7 +29,7 @@
   
   <div class="intern-experiance">
     <div class="experiance" *ngFor="let experiance of in_exps;let i = index">
-      <div class="label" *ngIf="i == 0">Intern Experiance:</div>
+      <div class="label" *ngIf="i == 0">Intern Experience:</div>
       <div class="label" *ngIf="i !==0"></div>
       <div class="position">{{experiance.position}}
         <li *ngFor="let duty of experiance.duties">{{duty}}</li>
