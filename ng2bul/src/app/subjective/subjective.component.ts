@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'subjective',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <button (click)="usr_activate(question)" class = "subj_positive" [ngClass] = "{'red':question.usr_isclicked}">+</button>
       <div class="subj_middle">{{question.text}}</div>
       <button (click)="d_activate(question)" class = "subj_negative" [ngClass]="{'green':question.d_isclicked}">-</button>
+      <textarea [ngClass]="{'show':question.usr_isclicked}" class="subj_input" contenteditable="true">{{question.usr_input}}</textarea>
     </div>
   `,
   styles: [`
@@ -40,10 +41,11 @@ import { Component } from '@angular/core';
     background-color: white; 
     width: 300px;
     height: 50px;
-    position: relative; 
+    position: absolute; 
     left: 20px; 
     top: -50px; 
     overflow: auto;
+    display: none; 
   }
   .subj_positive{
     float: left;
@@ -74,6 +76,9 @@ import { Component } from '@angular/core';
   }
   .subj_negative: active{
     background-color: green;
+  }
+  .show{
+    display: inline !important;
   }
   .red{
     background-color: red;
@@ -106,6 +111,9 @@ export class SubjectiveComponent {
   }
   
   usr_activate(question){
+    for(var i = 0;i<this.questions.length;i++){
+      this.questions[i].usr_isclicked = false; 
+    }
     if(question.usr_isclicked == true){
       question.usr_isclicked = false;
     }else{

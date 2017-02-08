@@ -14,7 +14,9 @@ import { NoteEditorComponent } from './noteeditor/note-editor.component';
 import { SubjectiveComponent } from './subjective/subjective.component';
 import { RiskCalcComponent } from './risk-calc/risk-calc.component';
 
-import { QuillModule } from '/home/ubuntu/workspace/ng2bul/node_modules/ng2-quill/src/quill/quill.module';
+import { QuillModule } from '../../node_modules/ng2-quill/src/quill/quill.module';
+
+// '/home/ubuntu/workspace/ng2bul/node_modules/ng2-quill/src/quill/quill.module';
 
 
 const appRoutes: Routes = [
