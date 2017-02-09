@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'subjective',
@@ -95,6 +95,7 @@ import { Component, ElementRef } from '@angular/core';
   `]
 })
 export class SubjectiveComponent {
+  @Output() denial_strings: EventEmitter<any> = new EventEmitter();
   questions: question[];
   constructor() {
     this.questions = [
@@ -130,6 +131,17 @@ export class SubjectiveComponent {
      question.d_isclicked = true;
      question.usr_isclicked = false; 
    } 
+   this.denial_strings.emit(this.gen_deniallist())
+  }
+  
+  gen_deniallist(){
+    var deniallist = [];
+    for(var i=0;i<this.questions.length;i++){
+      if(this.questions[i].d_isclicked == true){
+        deniallist.push(this.questions[i].denial)
+      }
+    }
+    return deniallist;
   }
 
 }

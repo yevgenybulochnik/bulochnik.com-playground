@@ -10,7 +10,7 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
       <risk-calc (riskassessment)="getchadsvasc($event)" [type]='chadsvasc'></risk-calc>
       <risk-calc (riskassessment)="gethasbled($event)" [type]='hasbled'></risk-calc>
       <quill-editor (onEditorCreated)="seteditor($event)" [modules]='buttons'></quill-editor>
-      <subjective></subjective>
+      <subjective (denial_strings)="getdenial_strings($event)"></subjective>
     </div>
   `,
   styles: [`
@@ -39,6 +39,7 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
   providers:[CHADS_vasc,HasBled]
 })
 export class NoteEditorComponent {
+  denial_strings: string[];
   chadsvasc: CHADS_vasc;
   hasbled: HasBled;
   buttons: any;
@@ -46,6 +47,7 @@ export class NoteEditorComponent {
   notetext: string; 
   editor: any;
   constructor(CHADS_vasc:CHADS_vasc, HasBled:HasBled) {
+    this.denial_strings = [];
     this.chadsvasc = CHADS_vasc;
     this.hasbled = HasBled; 
     this.buttons = {toolbar: [['bold','italic','underline','strike'],[{ 'list': 'ordered'}, { 'list': 'bullet' }]]};
@@ -60,12 +62,7 @@ export class NoteEditorComponent {
       </b>
     `;
   }
-  getchadsvasc(evt){
-    this.addremove("before","Plan:",this.progressnote.chadsvasc)
-    this.progressnote.chadsvasc = evt 
-    this.addremove("before","Plan:",this.progressnote.chadsvasc)
-  }
-  
+
   addremove(before_after, insertion_text, text){
     if(text === ""){
       return;
@@ -92,10 +89,26 @@ export class NoteEditorComponent {
     } 
   }
   
+  getchadsvasc(evt){
+    this.addremove("before","Plan:",this.progressnote.chadsvasc)
+    this.progressnote.chadsvasc = evt 
+    this.addremove("before","Plan:",this.progressnote.chadsvasc)
+  }  
+  
   gethasbled(evt){
     this.addremove("before","Plan:",this.progressnote.hasbled)
     this.progressnote.hasbled= evt 
     this.addremove("before","Plan:",this.progressnote.hasbled)
+  }
+  
+  getdenial_strings(evt){
+    for(var i=0;i<this.denial_strings.length;i++){
+      this.addremove("before","Objective",this.denial_strings[i])
+    }
+    this.denial_strings = evt;
+    for(var i=0;i<this.denial_strings.length;i++){
+      this.addremove("before","Objective",this.denial_strings[i])
+    }
   }
   
   seteditor(evt){
