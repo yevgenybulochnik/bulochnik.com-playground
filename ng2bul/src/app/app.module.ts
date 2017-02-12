@@ -14,7 +14,7 @@ import { NoteEditorComponent } from './noteeditor/note-editor.component';
 import { SubjectiveComponent, FocusDirective } from './subjective/subjective.component';
 import { RiskCalcComponent } from './risk-calc/risk-calc.component';
 
-import { QuillModule } from '../../node_modules/ng2-quill/src/quill/quill.module';
+import { QuillModule } from 'ngx-quill';
 
 
 const appRoutes: Routes = [
