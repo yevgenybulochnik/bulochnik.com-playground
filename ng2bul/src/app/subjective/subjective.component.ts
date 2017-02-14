@@ -102,8 +102,7 @@ export class FocusDirective{
   `]
 })
 export class SubjectiveComponent {
-  @Output() denial_strings: EventEmitter<any> = new EventEmitter();
-  @Output() usr_input_strings: EventEmitter<any> = new EventEmitter(); 
+  @Output() subjective_list: EventEmitter<any> = new EventEmitter();
   questions: question[];
   constructor() {
     this.questions = [
@@ -116,7 +115,6 @@ export class SubjectiveComponent {
       new question("Activity Changes", "Denies any changes in activity level."),
       new question("Pain Level/APAP","Denies any changes with pain. ")
       ]
-    
   }
   
   
@@ -138,29 +136,31 @@ export class SubjectiveComponent {
    }else{
      question.d_isclicked = true;
      question.usr_isclicked = false; 
+     question.usr_input = "";
    } 
-   this.denial_strings.emit(this.gen_deniallist())
+   this.subjective_list.emit(this.gen_subjective_list())
   }
   
   gen_usr_input_strings(question){
-    var usr_inputlist = [];
     question.usr_isclicked = false;
-    for(var i=0;i<this.questions.length;i++){
-      if(this.questions[i].usr_input){
-        usr_inputlist.push(this.questions[i].usr_input)
-      }
-    }
-    this.usr_input_strings.emit(usr_inputlist)
+    question.d_isclicked = false; 
+    this.subjective_list.emit(this.gen_subjective_list())
   }
   
-  gen_deniallist(){
-    var deniallist = [];
-    for(var i=0;i<this.questions.length;i++){
+  gen_subjective_list(){
+    var denial_list = [];
+    var usr_input_list = [];
+    for(var i=0; i<this.questions.length;i++){
       if(this.questions[i].d_isclicked == true){
-        deniallist.push(this.questions[i].denial)
+        denial_list.push(this.questions[i].denial)
+      }
+      if(this.questions[i].usr_input){
+        usr_input_list.push(this.questions[i].usr_input)
       }
     }
-    return deniallist;
+    var combined_list = usr_input_list.concat(denial_list)
+    console.log(combined_list)
+    return combined_list
   }
 
 }

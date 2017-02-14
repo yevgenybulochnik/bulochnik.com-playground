@@ -10,7 +10,7 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
       <risk-calc (riskassessment)="getchadsvasc($event)" [type]='chadsvasc'></risk-calc>
       <risk-calc (riskassessment)="gethasbled($event)" [type]='hasbled'></risk-calc>
       <quill-editor (onEditorCreated)="seteditor($event)" [modules]='buttons'></quill-editor>
-      <subjective (usr_input_strings)="getusr_input_strings($event)" (denial_strings)="getdenial_strings($event)"></subjective>
+      <subjective (subjective_list)="get_subjective_list($event)"></subjective>
     </div>
   `,
   styles: [`
@@ -39,8 +39,7 @@ import { CHADS_vasc, HasBled } from '../risk-calc/risk-calc.provider';
   providers:[CHADS_vasc,HasBled]
 })
 export class NoteEditorComponent {
-  denial_strings: string[];
-  usr_input_strings: string[];
+  subjective_list: string[];
   chadsvasc: CHADS_vasc;
   hasbled: HasBled;
   buttons: any;
@@ -48,8 +47,7 @@ export class NoteEditorComponent {
   notetext: string; 
   editor: any;
   constructor(CHADS_vasc:CHADS_vasc, HasBled:HasBled) {
-    this.denial_strings = [];
-    this.usr_input_strings = [];
+    this.subjective_list = [];
     this.chadsvasc = CHADS_vasc;
     this.hasbled = HasBled; 
     this.buttons = {toolbar: [['bold','italic','underline','strike'],[{ 'list': 'ordered'}, { 'list': 'bullet' }]]};
@@ -77,7 +75,6 @@ export class NoteEditorComponent {
         this.editor.insertText(end,"- "+text +'\n',{"bold":false})
       }else{
         start = content.indexOf(text)
-        // this.editor.removeFormat(start, text.length)
         this.editor.deleteText(start-3,text.length+3)
       }
     }else if(before_after === "before"){
@@ -85,7 +82,6 @@ export class NoteEditorComponent {
         this.editor.insertText(start, "- "+text+'\n',{"bold":false})
       }else{
         start = content.indexOf(text)  
-        // this.editor.removeFormat(start,text.length)
         this.editor.deleteText(start-3,text.length+3)
       }
     } 
@@ -103,23 +99,13 @@ export class NoteEditorComponent {
     this.addremove("before","Plan:",this.progressnote.hasbled)
   }
   
-  getdenial_strings(evt){
-    for(var i=0;i<this.denial_strings.length;i++){
-      this.addremove("before","Objective:",this.denial_strings[i])
+  get_subjective_list(evt){
+    for(var i=0;i<this.subjective_list.length;i++){
+      this.addremove("before","Objective:",this.subjective_list[i])
     }
-    this.denial_strings = evt;
-    for(var i=0;i<this.denial_strings.length;i++){
-      this.addremove("before","Objective:",this.denial_strings[i])
-    }
-  }
-  
-  getusr_input_strings(evt){
-    for(var i=0;i<this.usr_input_strings.length;i++){
-      this.addremove("after","Subjective:",this.usr_input_strings[i])
-    }
-    this.usr_input_strings = evt;
-    for(var i=0;i<this.usr_input_strings.length;i++){
-      this.addremove("after","Subjective:",this.usr_input_strings[i])
+    this.subjective_list = evt; 
+    for(var i=0;i<this.subjective_list.length;i++){
+      this.addremove("before","Objective:",this.subjective_list[i])
     }
   }
   
