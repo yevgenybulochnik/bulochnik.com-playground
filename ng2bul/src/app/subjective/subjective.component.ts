@@ -1,15 +1,5 @@
-import { Component, Output, EventEmitter, ElementRef, Directive} from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
-@Directive({
-  selector:'[focusIn]'
-})
-
-export class FocusDirective{
-  constructor(private el: ElementRef){}
-    ngAfterViewInit(){
-      this.el.nativeElement.focus()
-    }
-}
 
 @Component({
   selector: 'subjective',

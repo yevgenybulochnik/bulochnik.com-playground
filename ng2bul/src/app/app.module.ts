@@ -11,8 +11,9 @@ import { VirtualCvComponent } from './virtual-cv/virtual-cv.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageStartComponent } from './pagestart/pagestart.component';
 import { NoteEditorComponent } from './noteeditor/note-editor.component';
-import { SubjectiveComponent, FocusDirective } from './subjective/subjective.component';
+import { SubjectiveComponent} from './subjective/subjective.component';
 import { RiskCalcComponent } from './risk-calc/risk-calc.component';
+import { FocusDirective } from './focus.directive.ts';
 
 import { QuillModule } from 'ngx-quill';
 
