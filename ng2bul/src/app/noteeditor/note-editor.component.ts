@@ -72,17 +72,17 @@ export class NoteEditorComponent {
     var end = start+ insertion_text.length+1
     if(before_after === "after"){
       if(content.indexOf(text) === -1){
-        this.editor.insertText(end,"- "+text +'\n',{"bold":false})
+        this.editor.insertText(end,text +'\n',{"bold":false})
       }else{
         start = content.indexOf(text)
-        this.editor.deleteText(start-3,text.length+3)
+        this.editor.deleteText(start-1,text.length+1)
       }
     }else if(before_after === "before"){
       if(content.indexOf(text) === -1){
-        this.editor.insertText(start, "- "+text+'\n',{"bold":false})
+        this.editor.insertText(start,text+'\n',{"bold":false})
       }else{
         start = content.indexOf(text)  
-        this.editor.deleteText(start-3,text.length+3)
+        this.editor.deleteText(start-1,text.length+1)
       }
     } 
   }

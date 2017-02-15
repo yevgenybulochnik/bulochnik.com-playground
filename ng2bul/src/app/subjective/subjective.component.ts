@@ -143,10 +143,10 @@ export class SubjectiveComponent {
     var usr_input_list = [];
     for(var i=0; i<this.questions.length;i++){
       if(this.questions[i].d_isclicked == true){
-        denial_list.push(this.questions[i].denial)
+        denial_list.push("- "+this.questions[i].denial)
       }
       if(this.questions[i].usr_input){
-        usr_input_list.push(this.questions[i].usr_input)
+        usr_input_list.push("+ "+this.questions[i].usr_input)
       }
     }
     var combined_list = usr_input_list.concat(denial_list)
