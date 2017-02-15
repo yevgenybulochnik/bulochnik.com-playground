@@ -77,7 +77,7 @@ export class RiskCalcComponent{
   }
   
   gen_assessment(){
-    var text = 'Patient has a ' +this.type.riskcalc_name +"=" + this.score + ' ('
+    var text = '- Patient has a ' +this.type.riskcalc_name +"=" + this.score + ' ('
     if(this.clicked_factors.length == 0){
       text = "";
     }else if(this.clicked_factors.length ==1){
@@ -88,7 +88,7 @@ export class RiskCalcComponent{
       }
       text+=this.clicked_factors[this.clicked_factors.length-1]+') corresponding to a ' +this.percent+' annual risk' 
     }
-    return "- "+text
+    return text
   }
   
 }
