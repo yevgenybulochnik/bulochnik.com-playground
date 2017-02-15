@@ -88,7 +88,7 @@ export class RiskCalcComponent{
       }
       text+=this.clicked_factors[this.clicked_factors.length-1]+') corresponding to a ' +this.percent+' annual risk' 
     }
-    return text
+    return "- "+text
   }
   
 }

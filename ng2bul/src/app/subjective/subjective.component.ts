@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     <div class="subj_button" *ngFor="let question of questions" [ngClass]="{'red':question.usr_input}">
       <button (click)="usr_activate(question)" class = "subj_positive" [ngClass] = "{'red':question.usr_isclicked,'red':question.usr_input}">+</button>
       <div class="subj_middle">{{question.text}}</div>
-      <button (click)="d_activate(question)" class = "subj_negative" [ngClass]="{'green':question.d_isclicked}">-</button>
+      <button (click)="d_activate(question)" class = "subj_negative" [ngClass]="{'green':question.d_isclicked,'hide':question.usr_input}">-</button>
       <textarea focusIn *ngIf="question.usr_isclicked" (blur)="gen_usr_input_strings(question)" [(ngModel)]="question.usr_input" class="subj_input" contenteditable="true">{{question.usr_input}}</textarea>
     </div>
   `,
@@ -70,7 +70,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   .subj_negative{
     float: left;
     width: 25px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, opacity 0.2s;
   }
   .subj_negative:hover{
     background-color: rgba(180,238,184,0.65);
@@ -89,6 +89,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
   }
   .green:hover{
     background-color: lightgreen;
+  }
+  .hide{
+    opacity:0;
+  }
+  .hide:hover{
+    opacity:1;
   }
   `]
 })
@@ -117,7 +123,6 @@ export class SubjectiveComponent {
       question.usr_isclicked = false;
     }else{
       question.usr_isclicked = true;
-      question.d_isclicked = false; 
     }
   }
   
@@ -134,7 +139,9 @@ export class SubjectiveComponent {
   
   gen_usr_input_strings(question){
     question.usr_isclicked = false;
-    question.d_isclicked = false; 
+    if(question.usr_input){
+      question.d_isclicked = false;
+    }
     this.subjective_list.emit(this.gen_subjective_list())
   }
   
@@ -150,7 +157,6 @@ export class SubjectiveComponent {
       }
     }
     var combined_list = usr_input_list.concat(denial_list)
-    console.log(combined_list)
     return combined_list
   }
 
