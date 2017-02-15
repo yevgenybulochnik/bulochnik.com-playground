@@ -14,8 +14,8 @@ export class FocusDirective{
 @Component({
   selector: 'subjective',
   template: `
-    <div class="subj_button" *ngFor = "let question of questions">
-      <button (click)="usr_activate(question)" class = "subj_positive" [ngClass] = "{'red':question.usr_isclicked}">+</button>
+    <div class="subj_button" *ngFor="let question of questions" [ngClass]="{'red':question.usr_input}">
+      <button (click)="usr_activate(question)" class = "subj_positive" [ngClass] = "{'red':question.usr_isclicked,'red':question.usr_input}">+</button>
       <div class="subj_middle">{{question.text}}</div>
       <button (click)="d_activate(question)" class = "subj_negative" [ngClass]="{'green':question.d_isclicked}">-</button>
       <textarea focusIn *ngIf="question.usr_isclicked" (blur)="gen_usr_input_strings(question)" [(ngModel)]="question.usr_input" class="subj_input" contenteditable="true">{{question.usr_input}}</textarea>
@@ -46,6 +46,7 @@ export class FocusDirective{
     clear: left; 
     box-shadow: inset 0px 0px 2px 1px grey;
     position: relative;
+    transition: background-color 0.2s;
   }
   .subj_input{
     border: solid grey 1px; 
