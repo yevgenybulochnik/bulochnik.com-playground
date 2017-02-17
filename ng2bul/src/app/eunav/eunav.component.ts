@@ -13,7 +13,7 @@ export class EunavComponent{
       new eubutton("About"),
       new eubutton("Coding",["Virtual CV","Note Editor"]),
       new eubutton("Climbing"),
-      new eubutton("Photography",["City","Nature","Food"]),
+      new eubutton("Photography",["Nature"]),
       new eubutton("Contact")
       ]
   }

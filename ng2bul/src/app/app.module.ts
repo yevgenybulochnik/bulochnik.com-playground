@@ -14,15 +14,17 @@ import { NoteEditorComponent } from './noteeditor/note-editor.component';
 import { SubjectiveComponent} from './subjective/subjective.component';
 import { RiskCalcComponent } from './risk-calc/risk-calc.component';
 import { FocusDirective } from './focus.directive';
+import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
+import { NatureComponent } from './nature/nature.component';
 
 import { QuillModule } from 'ngx-quill';
-
 
 const appRoutes: Routes = [
   {path:'', component: PageStartComponent},
   {path:'about', component: AboutComponent},
   {path:'virtualcv', component: VirtualCvComponent},
   {path:'noteeditor', component: NoteEditorComponent},
+  {path:'nature', component: NatureComponent},
   {path:'404',component: NotFoundComponent},
   {path: '**', redirectTo:"/404"}
 ];
@@ -38,7 +40,9 @@ const appRoutes: Routes = [
     NoteEditorComponent,
     RiskCalcComponent,
     SubjectiveComponent,
-    FocusDirective
+    FocusDirective,
+    PhotoGalleryComponent,
+    NatureComponent
   ],
   imports: [
     BrowserModule,
