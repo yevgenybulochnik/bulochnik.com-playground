@@ -5,7 +5,7 @@ import { routeAnimation } from '../pagetransition';
   selector: 'app-nature',
   host:{'[@routeAnimation]':'true'},
   template:`
-  <div>Hello</div>
+  <gallery [datasource] ='images'></gallery>
   `,
   styles: [`
   :host{
@@ -20,7 +20,13 @@ import { routeAnimation } from '../pagetransition';
   animations:[routeAnimation]
 })
 export class NatureComponent {
-
-  constructor() { }
+  images: any; 
+  constructor() { 
+    this.images = [
+      {'url':'../assets/img/penguin1.jpg'},
+      {'url':'../assets/img/penguin2.jpg'},
+      {'url':'../assets/img/penguin3.jpg'}
+      ]
+  }
 
 }
