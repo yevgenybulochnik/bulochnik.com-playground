@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { routeAnimation } from '../pagetransition';
+import { ImageUrls } from '../../assets/image.provider';
 
 @Component({
   selector: 'app-nature',
@@ -17,16 +18,13 @@ import { routeAnimation } from '../pagetransition';
     height: 100%;
   }
   `],
+  providers:[ImageUrls],
   animations:[routeAnimation]
 })
 export class NatureComponent {
   images: any; 
-  constructor() { 
-    this.images = [
-      {'url':'../assets/img/penguin1.jpg'},
-      {'url':'../assets/img/penguin2.jpg'},
-      {'url':'../assets/img/penguin3.jpg'}
-      ]
+  constructor(ImageUrls:ImageUrls) { 
+    this.images = ImageUrls.images; 
   }
 
 }
