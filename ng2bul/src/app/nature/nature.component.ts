@@ -15,7 +15,6 @@ import { ImageUrls } from '../../assets/image.provider';
     position: absolute;
     z-index:-1000;
     border-left: solid black 15px;
-    height: 100%;
   }
   `],
   providers:[ImageUrls],

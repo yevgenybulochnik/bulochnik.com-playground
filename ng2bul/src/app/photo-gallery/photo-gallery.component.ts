@@ -4,11 +4,12 @@ import { Component, Input } from '@angular/core';
   selector: 'gallery',
   template: `
     <div class="selected" *ngIf="selectedImage">
-  	  <img src="{{selectedImage.url}}" width="600">
+      <span (click)="clearselectedImage()" class="close">&times;</span>
+  	  <img class="tn" src="{{selectedImage.url}}" width="600">
   	</div>
   	<div class='gallery-container'>
       <div (click)="setselectedImage(image)" class = "image-container" *ngFor= "let image of datasource">
-    	 <img src="{{image.url}}" class="tn" height="146">  
+    	 <img src="{{image.url}}" height="146">  
     	</div>
   	</div>
   `,
@@ -19,7 +20,7 @@ import { Component, Input } from '@angular/core';
       display: flex;
       flex-direction:row;
       flex-wrap: wrap;
-      flex:1;
+      justify-content: center;
     }
     .image-container{ 
       margin: 5px;
@@ -30,14 +31,33 @@ import { Component, Input } from '@angular/core';
     }
     .image-container:hover{
       transform: scale(1.1,1.1);
-      // border: solid darkblue 1px;
+    }
+    .tn{
+     width:80%;
+     max-width: 750px;
+     margin: auto;
+     display: block;
     }
     .selected{
       position: absolute;
-      margin: 150px auto ;
-      float: left;
-      clear: left;
+      padding:100px;
+      width: 100%;
+      height:100%;
 	    box-shadow:#999 1px 1px 3px 1px; 
+	    box-sizing:border-box;
+	    background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      z-index: 100;
+    }
+    .close {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
     }
   `]
 })
@@ -50,6 +70,10 @@ export class PhotoGalleryComponent {
 
   setselectedImage(image){
     this.selectedImage = image;
+  }
+  
+  clearselectedImage(){
+    this.selectedImage = null;
   }
 
 }
