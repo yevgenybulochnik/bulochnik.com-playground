@@ -49,6 +49,15 @@ import { Component, Input } from '@angular/core';
       background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
       z-index: 100;
     }
+    .selected{    
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
     .close {
       position: absolute;
       top: 35px;
