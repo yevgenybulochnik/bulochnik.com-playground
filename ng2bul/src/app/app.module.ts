@@ -18,11 +18,13 @@ import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { NatureComponent } from './nature/nature.component';
 
 import { QuillModule } from 'ngx-quill';
+import { ClimbingBlogComponent, FlipCardComponent } from './climbing-blog/climbing-blog.component';
 
 const appRoutes: Routes = [
   {path:'', component: PageStartComponent},
   {path:'about', component: AboutComponent},
   {path:'virtualcv', component: VirtualCvComponent},
+  {path:'climbing', component: ClimbingBlogComponent},
   {path:'noteeditor', component: NoteEditorComponent},
   {path:'nature', component: NatureComponent},
   {path:'404',component: NotFoundComponent},
@@ -42,7 +44,9 @@ const appRoutes: Routes = [
     SubjectiveComponent,
     FocusDirective,
     PhotoGalleryComponent,
-    NatureComponent
+    NatureComponent,
+    ClimbingBlogComponent,
+    FlipCardComponent
   ],
   imports: [
     BrowserModule,

@@ -22,8 +22,8 @@ import { ImageUrls } from '../../assets/image.provider';
 })
 export class NatureComponent {
   images: any; 
-  constructor(ImageUrls:ImageUrls) { 
-    this.images = ImageUrls.images; 
+  constructor(private imageUrls:ImageUrls) { 
+    this.images = imageUrls.images; 
   }
 
 }
