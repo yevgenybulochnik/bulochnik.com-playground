@@ -1,0 +1,11 @@
+<div class='border'></div>
+<div class="experiance" ng-repeat="experiance in ctrl.appe">
+  <div class="label" ng-if="$index == 0" style="border-right: double black 3px">APPE Rotations:<div style="font-style: italic;font-weight:normal">Des Moines, IA</div></div>
+  <div class="location" ng-if="$index !==0">{{experiance.location}}</div>
+  <div class="position">{{experiance.site}}
+    <li ng-repeat="duty in experiance.duties track by $index">{{duty}}</li>
+    <li class = "presentations" ng-repeat="presentation in experiance.presentations track by $index">{{presentation}}</li>
+  </div>
+  <div class="dates">{{experiance.dates}}</div>
+  <div style="float: right;font-style: italic;font-size: small">{{experiance.preceptor}}</div>
+</div>

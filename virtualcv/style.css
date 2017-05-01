@@ -1,0 +1,166 @@
+.cv {
+  display: inline-block;
+  border: solid black 1px;
+  width: 60em;
+  font-size: 130%;
+}
+
+contact {
+  border-bottom: double black 3px;
+  float: left;
+  width: 46em;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+contact .contact_info {
+  float: left;
+  width: 22em;
+  padding: 0.5em 0.5em 0em 0.5em;
+  border-right: double black 3px;
+}
+
+contact .contact_info .name {
+  font-size: 30;
+  font-weight: bold;
+}
+
+contact .contact_info .cred {
+  font-size: 30;
+  font-weight: bold;
+}
+
+contact .contact_address {
+  float: left;
+  width: 22em;
+  padding: 3em 0em 0.5em 0.5em;
+}
+
+education {
+  float: left;
+  clear: left;
+  width: 46em;
+  margin-left: 10%;
+  border-bottom: double black 3px;
+}
+
+education .edu {
+  width: 8em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-weight: bold;
+}
+
+education .college {
+  width: 26em;
+  padding-left: 0.2em;
+}
+
+education .college-dates {
+  font-style: italic;
+  float: right;
+}
+
+education > div {
+  float: left;
+  padding-top: 0.3em;
+}
+
+work-experiance, intern-experiance, appe-experiance {
+  float: left;
+  margin-left: 10%;
+}
+
+work-experiance .experiance, intern-experiance .experiance, appe-experiance .experiance {
+  float: left;
+  width: 46em;
+}
+
+work-experiance .experiance > div, intern-experiance .experiance > div, appe-experiance .experiance > div {
+  padding-top: 0.3em;
+}
+
+work-experiance .label, intern-experiance .label, appe-experiance .label {
+  width: 7.5em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-weight: bold;
+  float: left;
+}
+
+work-experiance .location, intern-experiance .location, appe-experiance .location {
+  width: 7.5em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-style: italic;
+  float: left;
+}
+
+work-experiance .position, intern-experiance .position, appe-experiance .position {
+  width: 27em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  float: left;
+  font-weight: bold;
+}
+
+work-experiance .position > li, intern-experiance .position > li, appe-experiance .position > li {
+  text-indent: -1em;
+  padding-left: 1.8em;
+  list-style-position: outside;
+  font-size: 85%;
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+work-experiance .dates, intern-experiance .dates, appe-experiance .dates {
+  float: right;
+  font-style: italic;
+  width: 8em;
+  text-align: right;
+}
+
+work-experiance .presentations, intern-experiance .presentations, appe-experiance .presentations {
+  padding-left: 3em !important;
+}
+
+leadership {
+  float: left;
+  margin-left: 10%;
+}
+
+leadership .activity {
+  float: left;
+  width: 46em;
+}
+
+leadership .activity > div {
+  padding-top: 0.3em;
+}
+
+leadership .label {
+  width: 7.5em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.5em;
+  font-weight: bold;
+  float: left;
+}
+
+leadership .role {
+  width: 27em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  float: left;
+  font-weight: bold;
+}
+
+leadership .dates {
+  float: right;
+  font-style: italic;
+  width: 10em;
+  text-align: right;
+}
+
+.border {
+  border-top: double black 3px;
+  width: 46em;
+}
