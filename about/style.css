@@ -1,0 +1,212 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.content_background {
+  box-sizing: border-box;
+  margin-left: 225px;
+  z-index: -1000;
+  height: 800px;
+  overflow: auto;
+}
+
+.content {
+  float: left;
+  width: 100%;
+}
+
+.content .about {
+  float: left;
+  border: solid grey 1px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px grey;
+  margin-top: 100px;
+  margin-left: 5%;
+  padding: 30px;
+  animation: aboutin 1s forwards;
+}
+
+.content.ng-enter {
+  opacity: 0;
+  z-index: 5555;
+  transition: opacity 2s;
+}
+
+.content.ng-enter-active {
+  opacity: 1;
+  z-index: 5555;
+}
+
+.content.ng-leave {
+  opacity: 1;
+  z-index: 6666;
+  transition: opacity 2s;
+}
+
+.content.ng-leave-active {
+  opacity: 0;
+  z-index: 6666;
+}
+
+nav {
+  border-right: solid grey 1px;
+  box-shadow: 5px 0px 20px 0px black;
+  box-sizing: border-box;
+  width: 225px;
+  height: 100%;
+  position: fixed;
+  cursor: pointer;
+  padding-top: 200px;
+}
+
+nav:hover .sublink_container {
+  height: 20px;
+  opacity: 1;
+}
+
+nav .link_container {
+  padding-left: 20px;
+}
+
+nav .link_container:hover {
+  background-color: black;
+  color: white;
+}
+
+nav .link_container:hover .link {
+  color: white;
+}
+
+nav .link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+}
+
+nav .sublink_container {
+  padding-left: 20px;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+nav .sublink_container .sublink {
+  display: block;
+  font-size: large;
+}
+
+nav .sublink_container .sublink:hover {
+  color: orange;
+}
+
+.active {
+  background: black !important;
+  color: white !important;
+}
+
+.active .link {
+  color: white !important;
+}
+
+.active .sublink_container {
+  height: 20px !important;
+  opacity: 1 !important;
+}
+
+.active_sublink {
+  color: orange !important;
+}
+
+.name {
+  padding: 20px;
+  font-size: 2em;
+  font-family: helveticaNeue-ultralight;
+  color: grey;
+  opacity: 0;
+  float: left;
+  animation: namefade 1.2s linear forwards;
+  animation-delay: 2s;
+}
+
+.name .alias {
+  animation: nameshift80 0.7s linear forwards;
+  animation-delay: 2s;
+}
+
+.name .last {
+  animation: nameshift160 0.7s linear forwards;
+  animation-delay: 2s;
+}
+
+.cred {
+  border-bottom: solid black 1px;
+  font-family: ariel;
+  float: left;
+  margin-top: 50px;
+  font-size: 1em;
+  opacity: 0;
+  animation: credfade 1.2s linear 2s forwards;
+}
+
+.cred .att {
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 100px;
+}
+
+.info {
+  float: left;
+  clear: left;
+  opacity: 0;
+  animation: namefade 1.2s linear 2s forwards;
+}
+
+@keyframes aboutin {
+  from {
+    width: 0%;
+    height: 0%;
+  }
+  to {
+    width: 80%;
+    height: 20%;
+  }
+}
+
+@keyframes nameshift80 {
+  from {
+    padding-left: 0px;
+  }
+  to {
+    padding-left: 90px;
+  }
+}
+
+@keyframes nameshift160 {
+  from {
+    padding-left: 0px;
+  }
+  to {
+    padding-left: 180px;
+  }
+}
+
+@keyframes namefade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes credfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 100px;
+  }
+}

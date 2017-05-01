@@ -1,0 +1,157 @@
+body
+  margin: 0px
+  padding: 0px
+
+.content_background
+  box-sizing: border-box
+  //background-color: #f3f3f3
+  // background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxNic+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9J2dsb3cnIGN4PSc1MCUnIGN5PScwJScgcj0nNTAlJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6I2FhYTsnLz4KICAgICAgPHN0b3Agb2Zmc2V0PSc1MCUnIHN0eWxlPSdzdG9wLWNvbG9yOiNlNGU0ZTQ7Jy8+CiAgICAgIDxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3Atb3BhY2l0eTowOyBzdG9wLWNvbG9yOiNmM2YzZjM7Jy8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0nMTEwJScgeT0nLTUlJyB4PSctNSUnIGhlaWdodD0nMTEwJScgZmlsbD0ndXJsKCNnbG93KScvPgo8L3N2Zz4K)
+  margin-left: 225px
+  z-index: -1000
+  height: 800px
+  overflow: auto
+
+
+.content
+  float: left
+  width: 100%
+  .about
+    float: left
+    border: solid grey 1px
+    background-color: white
+    box-shadow: 5px 5px 5px 0px grey
+    margin-top: 100px
+    margin-left: 5%
+    padding: 30px
+    animation: aboutin 1s forwards
+.content.ng-enter
+  opacity: 0
+  z-index: 5555
+  transition: opacity 2s
+.content.ng-enter-active
+  opacity: 1
+  z-index: 5555
+.content.ng-leave
+  opacity: 1
+  z-index: 6666 
+  transition: opacity 2s
+.content.ng-leave-active
+  opacity: 0
+  z-index: 6666
+
+nav
+  //border: solid black 1px
+  border-right: solid grey 1px
+  box-shadow : 5px 0px 20px 0px black
+  box-sizing: border-box
+  width: 225px
+  height: 100%
+  position: fixed
+  cursor: pointer
+  padding-top: 200px
+  &:hover .sublink_container
+    height: 20px
+    opacity: 1
+  .link_container
+    //border: solid black 1px
+    padding-left: 20px
+    &:hover
+      background-color: black
+      color: white
+      .link
+        color: white
+  .link
+    display: block
+    text-decoration: none
+    color: black
+    font-size: x-large
+  .sublink_container
+    padding-left: 20px
+    height: 0px
+    opacity: 0
+    transition: all 0.3s
+    .sublink
+      display: block
+      font-size: large
+      &:hover
+        color: orange
+
+
+.active
+  background: black !important
+  color: white !important
+  .link
+    color: white !important
+  .sublink_container
+    height: 20px !important
+    opacity: 1 !important
+
+.active_sublink
+  color: orange !important
+
+.name
+  padding: 20px
+  font-size: 2em
+  font-family: helveticaNeue-ultralight
+  color: grey
+  opacity: 0
+  float: left
+  animation: namefade 1.2s linear forwards
+  animation-delay: 2s
+  .first
+  .alias
+    animation: nameshift80 0.7s linear forwards
+    animation-delay: 2s
+  .last
+    animation: nameshift160 0.7s linear forwards
+    animation-delay: 2s
+.cred
+  border-bottom: solid black 1px
+  font-family: ariel
+  float: left
+  margin-top: 50px
+  font-size: 1em
+  opacity: 0
+  animation: credfade 1.2s linear 2s forwards
+  .att
+    //border: solid black 1px
+    margin-top: 20px
+    margin-left: 80px
+    margin-right: 100px
+.info
+  float: left
+  clear: left
+  opacity: 0
+  animation: namefade 1.2s linear 2s forwards
+
+@keyframes aboutin
+  from
+    width: 0%
+    height: 0%
+  to
+    width: 80%
+    height: 20%
+@keyframes nameshift80
+  from
+    padding-left: 0px
+  to
+    padding-left: 90px
+
+@keyframes nameshift160
+  from
+    padding-left: 0px
+  to
+    padding-left: 180px
+
+@keyframes namefade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes credfade
+  from
+    opacity: 0
+  to
+    opacity: 1
+    margin-left: 100px
