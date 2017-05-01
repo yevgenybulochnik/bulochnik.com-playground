@@ -1,0 +1,14 @@
+<!--<div [routerLink]="button.link_path ? ['button.link_path']:['button.sublink[0].link_path']" [routerLinkActive]="['active']" (click)="activate(button)" class="eulink" [ngClass]="{'active':button.link_isactive}" *ngFor = "let button of links">-->
+<!--    {{button.link}}-->
+<!--    <div [routerLink]='subbutton.link_path' [routerLinkActive]="['sub_active']" (click)="sub_activate(subbutton)" [ngClass]="{'sub_active':subbutton.link_isactive}" class="eusubblink" *ngFor="let subbutton of button.sublink">- {{subbutton.link}}</div>-->
+<!--</div>-->
+
+<div *ngFor="let button of links">
+    <div [routerLink]="button.link_path" [routerLinkActive]="['active']" *ngIf="!button.sublink" (click)="activate(button)" class="eulink">{{button.link}}</div>   
+    <div *ngIf = "button.sublink" class="eulink" (click)="activate(button)" [ngClass]="{'active':button.link_isactive}" >
+        {{button.link}}
+        <div [routerLink]="subbutton.link_path" [routerLinkActive] = "['sub_active']" *ngFor="let subbutton of button.sublink" class='eusubblink'>
+            - {{subbutton.link}}
+        </div>
+    </div>
+</div>

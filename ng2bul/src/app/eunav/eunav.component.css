@@ -1,0 +1,55 @@
+:host {
+    width: 200px;
+    border-right: solid black 1px;
+    height: 100%;
+    padding-top: 250px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    cursor:pointer;
+    background-color:white;
+    z-index:1;
+}
+
+:host(:hover) .eusubblink{
+    height: 20px;
+    opacity: 1;
+}
+
+.eulink {
+    padding-left: 20px; 
+    font-size: x-large;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.eulink:hover {
+    background-color: black;
+    color: white;
+}
+
+.eusubblink {
+    padding-left: 20px;
+    font-size: large;
+    height: 0px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.eusubblink:hover {
+    color: orange;
+}
+
+.active {
+    background-color: black !important;
+    color: white !important;
+}
+
+.active .eusubblink{
+    height: 20px !important;
+    opacity: 1 !important;
+}
+
+.sub_active{
+    color: orange !important;
+}
