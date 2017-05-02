@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bulochnik.com</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.quilljs.com/0.20.1/quill.snow.css"/>
+    <script src="http://cdn.quilljs.com/0.20.1/quill.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app = "bulochnik">
+    <eu-nav></eu-nav>
+    <div class="content_background">
+      <div class="content" ng-view></div>
+    </div>
+  </body>
+  <script src="app.js" charset="utf-8"></script>
+  <script src="/nav/nav.js" charset="utf-8"></script>
+  <script src="/progress/progressnote/noteservice.js" charset="utf-8"></script>
+  <script src="/progress/progressnote/progressnote.js" charset="utf-8"></script>
+  <script src="/progress/riskcalcs/chads/chadsvasc.js" charset="utf-8"></script>
+  <script src="/progress/riskcalcs/hasbled/hasbled.js" charset="utf-8"></script>
+  <script src="/progress/subjective/subjective.js" charset="utf-8"></script>
+</html>
