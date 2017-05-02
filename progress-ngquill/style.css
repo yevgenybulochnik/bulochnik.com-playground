@@ -1,0 +1,176 @@
+body {
+  width: 1000px;
+  margin: 100px auto 100px;
+}
+
+.calc_container {
+  float: left;
+}
+
+chadsvasc, hasbled {
+  float: left;
+  clear: left;
+  margin: 5px;
+  padding: 10px;
+  border: solid grey 1px;
+  box-shadow: 2px 2px 5px 2px grey;
+}
+
+chadsvasc button, hasbled button {
+  display: block;
+  width: 87px;
+  height: 20px;
+  padding: 0px;
+  margin: 2px auto;
+  border: solid grey 1px;
+  box-shadow: inset 0px 0px 2px 1px grey;
+  background-color: white;
+  transition: width 0.5s, background-color 0.2s;
+}
+
+chadsvasc button .right, hasbled button .right {
+  float: left;
+  width: 15px;
+  border-right: solid grey 1px;
+}
+
+button:hover {
+  background-color: pink;
+}
+
+button:active {
+  background-color: darkred;
+}
+
+.active {
+  background-color: red !important;
+  width: 100px;
+}
+
+.active:hover {
+  background-color: red;
+}
+
+.active:active {
+  background-color: darkred;
+}
+
+subjective {
+  margin: 5px;
+  padding: 10px;
+  border: solid grey 1px;
+  display: inline-block;
+  box-shadow: 2px 2px 5px 2px grey;
+}
+
+subjective button {
+  padding: 2px;
+  padding-top: 3px;
+  margin: 0px;
+  height: 100%;
+  border: none;
+  background: white;
+  box-shadow: inset 0px 0px 2px 1px grey;
+}
+
+subjective .subj_button {
+  border: solid grey 1px;
+  height: 25px;
+  margin: 1px;
+  float: left;
+  clear: left;
+  box-shadow: inset 0px 0px 2px 1px grey;
+  position: relative;
+}
+
+subjective .subj_button .subj_input {
+  border: solid grey 1px;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+  top: -50px;
+  overflow: auto;
+}
+
+subjective .subj_button .subj_positive {
+  float: left;
+  width: 25px;
+  transition: background-color 0.2s;
+}
+
+subjective .subj_button .subj_positive:hover {
+  background-color: pink;
+}
+
+subjective .subj_button .subj_positive:active {
+  background-color: darkred;
+}
+
+subjective .subj_button .subj_middle {
+  float: left;
+  width: 150px;
+  height: 22px;
+  padding-top: 3px;
+  text-align: center;
+  transition: background-color 1s;
+}
+
+subjective .subj_button .subj_negative {
+  float: left;
+  width: 25px;
+  transition: background-color 0.2s;
+}
+
+subjective .subj_button .subj_negative:hover {
+  background-color: rgba(180, 238, 184, 0.65);
+}
+
+subjective .subj_button .subj_negative:active {
+  background-color: green;
+}
+
+subjective .subj_button .red {
+  background-color: red;
+}
+
+subjective .subj_button .red:hover {
+  background-color: red;
+}
+
+subjective .subj_button .red:active {
+  background-color: darkred;
+}
+
+subjective .subj_button .green {
+  background-color: lightgreen;
+}
+
+subjective .subj_button .green:hover {
+  background-color: lightgreen;
+}
+
+subjective .subj_button .green:active {
+  background-color: green;
+}
+
+progressnote {
+  float: left;
+}
+
+progressnote #toolbar {
+  border: solid grey 1px;
+  box-shadow: 2px 2px 5px 2px grey;
+  width: 100%;
+}
+
+progressnote #editor {
+  border: solid grey 1px;
+  height: 500px;
+  width: 600px;
+  font-size: 12pt;
+  font-family: arial;
+  margin-top: 15px;
+  box-shadow: 2px 2px 5px 2px grey;
+}
